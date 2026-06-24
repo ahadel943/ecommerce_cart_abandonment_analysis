@@ -1,0 +1,6 @@
+to generate the datasets
+1. open CMD
+2. run: pip install pandas faker
+3. move to the data folder
+4. run: python main.py
+5. an 'output' folder will be created with the CSVs 
