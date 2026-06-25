@@ -10,8 +10,7 @@ create table raw_data.users (
 	device varchar(20),
 	acquisition_channel varchar(50),
 	customer_type varchar(20),
-	gender varchar(20),
-	agt int,
+	age int,
 	is_premium boolean
 );
 
@@ -80,25 +79,4 @@ create table raw_data.abandonment_reasons(
 	reason varchar(100),
 	confidence numeric(3, 2)
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
