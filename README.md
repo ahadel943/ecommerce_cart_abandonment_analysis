@@ -34,3 +34,6 @@ The goal of this project is to measure cart abandonment performance, identify th
 
 ## **Schema Design**
 **NO SCHEMA YET**
+
+## **Data Preparation**
+### **Data Quality Assessment**
