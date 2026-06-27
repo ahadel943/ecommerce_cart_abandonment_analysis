@@ -196,19 +196,62 @@ select
 	count(*) filter(where confidence is null) as confidence_missing -- NO missing values
 from raw_data.abandonment_reasons;
 
+-- ===============================================
+-- 							Orphan Records Check
+-- ===============================================
+-- carts to users orphan records check
+select count(*)
+from raw_data.carts as c
+left join raw_data.users as u
+on c.user_id = u.user_id
+where u.user_id is null; -- NO orphan records found
 
+-- cart_items to carts orphan records check
+select count(*)
+from raw_data.cart_items as ci
+left join raw_data.carts as c
+on ci.cart_id = c.cart_id
+where c.cart_id is null; -- NO orphan records found
 
+-- cart_items to products orphan records check
+select count(*)
+from raw_data.cart_items as ci
+left join raw_data.products as p
+on ci.product_id = p.product_id
+where p.product_id is null; -- NO orphan records found
 
+-- checkout_attempts to carts orphan records check
+select count(*)
+from raw_data.checkout_attempts as ca
+left join raw_data.carts as c
+on ca.cart_id = c.cart_id
+where c.cart_id is null; -- NO orphan records found
 
+-- orders to carts orphan records check
+select count(*)
+from raw_data.orders as o
+left join raw_data.carts as c
+on o.cart_id = c.cart_id 
+where c.cart_id is null; -- NO orphan records found
 
+-- cart_events to carts orphan records check
+select count(*)
+from raw_data.cart_events as ce
+left join raw_data.carts as c
+on ce.cart_id = c.cart_id 
+where c.cart_id is null;
 
+-- cart_events to users orphan records check
+select count(*)
+from raw_data.cart_events as ce
+left join raw_data.users as u
+on ce.user_id = u.user_id
+where u.user_id is null; -- NO orphan records found
 
-
-
-
-
-
-
-
-
+-- abandonment_reasons to carts orphan records check
+select count(*)
+from raw_data.abandonment_reasons as ar
+left join raw_data.carts as c
+on ar.cart_id = c.cart_id
+where c.cart_id is null;
 
