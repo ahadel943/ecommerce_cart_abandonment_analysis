@@ -37,3 +37,20 @@ The goal of this project is to measure cart abandonment performance, identify th
 
 ## **Data Preparation**
 ### **Data Quality Assessment**
+A comprehensive data quality assessment was performed before moving data from the **raw_data** layer to the **analytics_data** layer. The objective was to evaluate data quality, validate table relationships, and identify any potential issues that could impact downstream analysis.
+
+The assessment focused on ensuring the dataset was complete, consistent, and reliable for cart abandonment analysis.
+
+The following checks were performed:
+- Checked for exact duplicate records across all tables.
+- Validated primary key uniqueness.
+- Assessed missing values and data completeness.
+- Identified orphan records.
+- Validated categorical values against their expected domains.
+- Verified numeric value ranges and business rule consistency.
+
+### **Issues Found**
+| Check          | Result                                    |
+| -------------- | ----------------------------------------- |
+| Missing Values | **city** column: 5,125 records (5.12%)    |
+| Business Rule | **11 active products** have zero stock (`stock = 0` while `is_active = TRUE`). |

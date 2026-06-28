@@ -322,10 +322,12 @@ select distinct status from raw_data.carts; -- Active
 -- 							Data Type Validation
 -- ================================================
 select count(user_id) from raw_data.users where age <= 0; -- 0
-
-
-
-
+select min(signup_date), max(signup_date) from raw_data.users; -- 2023-01-01 00:20:19.000, 2025-12-30 23:53:47.000
+select count(*) from raw_data.cart_items where quantity <= 0; -- 0
+select count(*) from raw_data.products where stock = 0 and is_active = TRUE; -- 11 products with a stock of 0 and flagged as active
+select count(*) from raw_data.products where rating < 0 or rating > 5; -- 0
+select count(*) from raw_data.products where cost < 0; -- 0
+select count(*) from raw_data.products where price < cost; -- 0
 
 
 
