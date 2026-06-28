@@ -311,6 +311,26 @@ from raw_data.abandonment_reasons; -- NO duplicated cart_id found
 -- ===================================================================================
 select distinct customer_type from raw_data.users; -- Returning, New
 select distinct device from raw_data.users; -- Mobile, Tablet, Desktop
-select distinct country from raw_data.users; -- Kuwait, UAE, Egypt, Saudi Arabia, Jordan
-select distinct city from raw_data.users; -- Giza, Riyadh, Dubai, Amman, Cairo, 'Null', Abu Dhabi, Alexandria, Jeddah, Kuwait City
-select distinct acquisition_channel from raw_data.users; -- unknown, Referral, Paid Search, Direct, Social Media, Email, Organic Search
+
+select distinct payment_method from raw_data.checkout_attempts; -- Wallet, Card, Cash
+
+select distinct event_name from raw_data.cart_events; -- checkout_started, payment_failed, cart_created, remove_item, add_item, cart_abandoned, purchase_completed
+
+select distinct status from raw_data.carts; -- Active
+
+-- ================================================
+-- 							Data Type Validation
+-- ================================================
+select count(user_id) from raw_data.users where age <= 0; -- 0
+
+
+
+
+
+
+
+
+
+
+
+
