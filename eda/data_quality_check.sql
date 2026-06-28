@@ -9,7 +9,7 @@ select * from raw_data.cart_events limit 10;
 select * from raw_data.abandonment_reasons limit 10;
 
 -- ===============================================
--- 							duplicated rows check
+-- 							Duplicated Rows Check
 -- ===============================================
 -- users table duplicates check
 select 
@@ -255,3 +255,62 @@ left join raw_data.carts as c
 on ar.cart_id = c.cart_id
 where c.cart_id is null;
 
+-- ===============================================
+-- 							Primary Keys Uniqueness Check
+-- ===============================================
+-- users table PK check
+select
+	count(*) as total_cnt,
+	count(distinct user_id) as ids_cnt
+from raw_data.users; -- NO duplicated user_id found
+
+-- products table PK check
+select
+	count(*) as total_cnt,
+	count(distinct product_id) as ids_cnt
+from raw_data.products; -- NO duplicated product_id found
+
+-- orders table PK check
+select
+	count(*) as total_cnt,
+	count(distinct order_id) as ids_cnt
+from raw_data.orders; -- NO duplicated order_id found
+
+-- checkout_attempts table PK check
+select
+	count(*) as total_cnt,
+	count(distinct checkout_id) as ids_cnt
+from raw_data.checkout_attempts; -- NO duplicated checkout_id found
+
+-- checkout_attempts table PK check
+select
+	count(*) as total_cnt,
+	count(distinct cart_id) as ids_cnt
+from raw_data.carts; -- NO duplicated cart_id found
+
+-- cart_items table PK check
+select
+	count(*) as total_cnt,
+	count(distinct cart_item_id) as ids_cnt
+from raw_data.cart_items; -- NO duplicated cart_item_id found
+
+-- cart_events table PK check
+select
+	count(*) as total_cnt,
+	count(distinct event_id) as ids_cnt
+from raw_data.cart_events; -- NO duplicated event_id found
+
+-- abandonment_reasons table PK check
+select
+	count(*) as total_cnt,
+	count(distinct cart_id) as cart_ids_cnt
+from raw_data.abandonment_reasons; -- NO duplicated cart_id found
+
+-- ===================================================================================
+-- 							Domain Validation (Categorical Values Sequences) Check
+-- ===================================================================================
+select distinct customer_type from raw_data.users; -- Returning, New
+select distinct device from raw_data.users; -- Mobile, Tablet, Desktop
+select distinct country from raw_data.users; -- Kuwait, UAE, Egypt, Saudi Arabia, Jordan
+select distinct city from raw_data.users; -- Giza, Riyadh, Dubai, Amman, Cairo, 'Null', Abu Dhabi, Alexandria, Jeddah, Kuwait City
+select distinct acquisition_channel from raw_data.users; -- unknown, Referral, Paid Search, Direct, Social Media, Email, Organic Search
