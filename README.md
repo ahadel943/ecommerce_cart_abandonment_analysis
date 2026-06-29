@@ -54,3 +54,12 @@ The following checks were performed:
 | -------------- | ----------------------------------------- |
 | Missing Values | **city** column: 5,125 records (5.12%)    |
 | Business Rule | **11 active products** have zero stock (`stock = 0` while `is_active = TRUE`). |
+
+### **Data Cleaning Process**
+Following the data quality assessment, only minimal cleaning was required before loading the data into the analytical layer.
+
+The following transformations were applied:
+- Replaced missing values in the `city` column with **'Unknown'** using `COALESCE()` to preserve records while avoiding bias toward any existing city.
+- Retained the **11 active products with zero stock** without modification. Due to their low frequency relative to the dataset size, they were treated as valid business anomalies rather than data errors and were preserved for analysis.
+
+No duplicate records, orphan records, or primary key violations were found. Therefore, no additional cleaning or record removal was required.
