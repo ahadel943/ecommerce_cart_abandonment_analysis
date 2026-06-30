@@ -33,7 +33,7 @@ The goal of this project is to measure cart abandonment performance, identify th
 | Abandonment Reasons    | Contains the simulated reason associated with each abandoned cart, along with a confidence score indicating the likelihood of that reason. This table supports root cause analysis of cart abandonment.                                  |
 
 ## **Schema Design**
-**NO SCHEMA YET**
+![erd](./schema/erd.png)
 
 ## **Data Preparation**
 ### **Data Quality Assessment**
