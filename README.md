@@ -63,3 +63,6 @@ The following transformations were applied:
 - Retained the **11 active products with zero stock** without modification. Due to their low frequency relative to the dataset size, they were treated as valid business anomalies rather than data errors and were preserved for analysis.
 
 No duplicate records, orphan records, or primary key violations were found. Therefore, no additional cleaning or record removal was required.
+
+## **Exploratory Data Analysis (EDA)**
+- The **users** table contains **100,000** users, the **products** table contains **5,000** products, the **orders** table contains **64,857** orders, the **checkout_attempts** table conatins **216,796** attempts, the **carts** table conatins **361,028** carts, the **cart_items** table contains **1,083,844** cart items, the **cart_events** table conatins **3,251,588** events, the **abandonment_reasons** table conatins **144,232** records. 
