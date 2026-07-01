@@ -65,4 +65,14 @@ The following transformations were applied:
 No duplicate records, orphan records, or primary key violations were found. Therefore, no additional cleaning or record removal was required.
 
 ## **Exploratory Data Analysis (EDA)**
-- The **users** table contains **100,000** users, the **products** table contains **5,000** products, the **orders** table contains **64,857** orders, the **checkout_attempts** table conatins **216,796** attempts, the **carts** table conatins **361,028** carts, the **cart_items** table contains **1,083,844** cart items, the **cart_events** table conatins **3,251,588** events, the **abandonment_reasons** table conatins **144,232** records. 
+- The **users** table contains **100,000** users, the **products** table contains **5,000** products, the **orders** table contains **64,857** orders, the **checkout_attempts** table conatins **216,796** attempts, the **carts** table conatins **361,028** carts, the **cart_items** table contains **1,083,844** cart items, the **cart_events** table conatins **3,251,588** events, the **abandonment_reasons** table conatins **144,232** records.
+
+### **Users Volume by Country**
+![1.users_volume_by_country](./charts/1.users_volume_by_country.png)
+#### **Key Findings**
+- The user base is distributed almost evenly across the **five** countries, with each market contributing approximately **20%** of the total users.
+- The **UAE** has the largest user base, representing **20.18%** of all registered users.
+- **Saudi Arabia** has the smallest user base, accounting for **19.81%** of total users.
+- The difference between the largest and smallest country segments is minimal, indicating a well-balanced geographic distribution.
+#### **Business Interpretation**
+The dataset represents a balanced customer distribution across the five target markets, with no single country dominating the user base. This balanced distribution helps reduce geographic bias in subsequent analyses, making cross-country comparisons more reliable. Any significant differences observed later in cart abandonment behavior or conversion performance are therefore less likely to be driven solely by differences in user population size.
