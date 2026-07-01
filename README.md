@@ -68,7 +68,7 @@ No duplicate records, orphan records, or primary key violations were found. Ther
 - The **users** table contains **100,000** users, the **products** table contains **5,000** products, the **orders** table contains **64,857** orders, the **checkout_attempts** table conatins **216,796** attempts, the **carts** table conatins **361,028** carts, the **cart_items** table contains **1,083,844** cart items, the **cart_events** table conatins **3,251,588** events, the **abandonment_reasons** table conatins **144,232** records.
 
 ### **Users Volume by Country**
-![1.users_volume_by_country](./charts/1.users_volume_by_country.png)
+![users_volume_by_country](./charts/1.users_volume_by_country.png)
 #### **Key Findings**
 - The user base is distributed almost evenly across the **five** countries, with each market contributing approximately **20%** of the total users.
 - The **UAE** has the largest user base, representing **20.18%** of all registered users.
@@ -76,3 +76,16 @@ No duplicate records, orphan records, or primary key violations were found. Ther
 - The difference between the largest and smallest country segments is minimal, indicating a well-balanced geographic distribution.
 #### **Business Interpretation**
 The dataset represents a balanced customer distribution across the five target markets, with no single country dominating the user base. This balanced distribution helps reduce geographic bias in subsequent analyses, making cross-country comparisons more reliable. Any significant differences observed later in cart abandonment behavior or conversion performance are therefore less likely to be driven solely by differences in user population size.
+### **Users Volume by City**
+![users_volume_by_city](./charts/2.users_volume_by_city.png)
+#### **Key Findings**
+- User distribution across cities is balanced within each country, with no single city overwhelmingly dominating its local user base.
+- **Amman** and **Kuwait City** have the largest individual city populations, representing **19.09%** and **18.99%** of the total user base, respectively. This is expected since each is the only represented city for its country.
+- In **Egypt**, users are distributed almost evenly across **Alexandria (6.33%)**, **Giza (6.29%)**, and **Cairo (6.26%)**.
+- In **Saudi Arabia**, the user base is nearly equally divided between **Jeddah (9.39%)** and **Riyadh (9.37%)**.
+- In the **UAE**, **Dubai (9.58%)** and **Abu Dhabi (9.57%)** show an almost identical user distribution.
+- The **Unknown** city category accounts for approximately **1%** of users in every country, reflecting a consistent pattern of missing city values across the dataset.
+#### **Business Interpretation**
+The city distribution indicates that the dataset was generated with a balanced geographic representation within each country. No individual city disproportionately dominates its country's customer base, reducing the likelihood of geographic concentration bias during subsequent analyses.
+
+Additionally, the **Unknown** city values are consistently distributed across all countries rather than concentrated in a specific market. This suggests that the missing city information is a general data quality issue rather than a country-specific problem, making it less likely to distort geographic comparisons in later analyses.
