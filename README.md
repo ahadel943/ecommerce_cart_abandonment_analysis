@@ -89,3 +89,14 @@ The dataset represents a balanced customer distribution across the five target m
 The city distribution indicates that the dataset was generated with a balanced geographic representation within each country. No individual city disproportionately dominates its country's customer base, reducing the likelihood of geographic concentration bias during subsequent analyses.
 
 Additionally, the **Unknown** city values are consistently distributed across all countries rather than concentrated in a specific market. This suggests that the missing city information is a general data quality issue rather than a country-specific problem, making it less likely to distort geographic comparisons in later analyses.
+### **Users Volume by Device**
+![users_volume_by_device](./charts/3.users_volume_by_device.png)
+#### **Key Findings**
+- **Mobile** is the most commonly used device, accounting for **65.03%** of the total user base.
+- **Desktop** is the second most popular platform, representing **29.99%** of users.
+- **Tablet** usage is relatively limited, contributing only **4.98%** of the total users.
+- The device distribution is clearly **skewed** toward **mobile**, with nearly **two-thirds** of users accessing the platform through mobile devices.
+#### **Business Interpretation**
+The dataset indicates a strong preference for **mobile** devices, with mobile users representing the majority of the customer base. This distribution reflects a **mobile-first** usage pattern that is commonly observed in modern e-commerce platforms.
+
+Given the significant share of mobile users, subsequent analyses should compare cart abandonment and conversion performance across device types to determine whether user behavior differs between mobile, desktop, and tablet users.

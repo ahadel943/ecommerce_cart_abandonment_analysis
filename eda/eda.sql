@@ -21,23 +21,24 @@ order by "Users Count" desc;
 
 -- users count by city
 select
+	country as "Country",
 	city as "City",
 	count(*) as "Users Count",
 	sum(count(*)) over() as "Total Count",
 	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by "City"
-order by "Users Count" desc;
+group by "Country", "City"
+order by "Country";
 
 -- users count by device
 select
-	device,
-	count(*) as users_count,
-	sum(count(*)) over() as total_count,
-	count(*) / sum(count(*)) over() as perc
+	device as "Device",
+	count(*) as "Users Count",
+	sum(count(*)) over() as "Total Count",
+	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by device
-order by users_count desc;
+group by "Device"
+order by "Users Count" desc;
 
 -- users count by acquisition_channel
 select
