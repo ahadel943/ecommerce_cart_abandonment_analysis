@@ -124,11 +124,18 @@ These results provide a solid baseline for the subsequent analysis, where acquis
 The dataset is primarily composed of users labeled as **New** customers, while **Returning** customers represent a substantial minority of the user base.
 
 At the EDA stage, these values should be interpreted as customer classifications available in the dataset rather than validated behavioral patterns. Subsequent analyses should verify whether these labels are reflected in actual customer behavior, such as cart creation frequency, purchase completion, and cart abandonment rates.
+### **Users Volume by Customer Type**
+![users_volume_by_trend](./charts/6.users_volume_by_trend.png)
+#### **Key Findings**
+- User registrations remain remarkably stable throughout the three-year period, with no significant fluctuations in monthly registrations.
+- Monthly registrations range from **2.53%** to **2.94%** of the total user base, representing a narrow variation of only **0.41 percentage points**.
+- The highest number of registrations occurred in **December 2023 (2.94%)**, while the lowest was recorded in **February 2023 (2.53%)**.
+- The average monthly share of registrations is **2.78%**, which is very close to the median (**2.81%**), indicating a consistent monthly distribution.
+- Trendline analysis shows a **slight upward trend** in user registrations over the three-year period. However, the calculated slope is very small, suggesting that the increase is gradual and overall registration volumes remain relatively stable.
+#### **Business Interpretation**
+User registrations are consistently distributed throughout the observation period, with only minor month-to-month variations. Although the overall trend is slightly positive, the growth rate is modest, indicating that the platform experienced stable customer acquisition rather than periods of rapid expansion or decline.
 
-
-
-
-
+This stable acquisition pattern provides a reliable baseline for subsequent analyses, allowing changes in cart abandonment or conversion performance to be interpreted with minimal influence from large fluctuations in user registration volume.
 
 
 

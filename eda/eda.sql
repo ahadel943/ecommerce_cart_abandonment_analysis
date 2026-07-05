@@ -64,10 +64,19 @@ order by "Users Count" desc;
 select
 	extract(year from signup_date) as "Year",
 	extract(month from signup_date) as "Month",
-	to_char(signup_date, 'Mon') as "Month Name",
-	count(*) as users_count
+	to_char(signup_date, 'Mon') as "Month Tag",
+	to_char(signup_date, 'Month') as "Month Name",
+	to_char(signup_date, 'Mon-yy') as "Month-Year",
+	count(*) as "Users Count",
+	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by "Year", "Month", "Month Name"
+group by "Year", "Month", "Month Tag", "Month Name","Month-Year"
+order by "Year", "Month";
+
+select 
+	min(signup_date) as "min", max(signup_date) as "max"
+from analytics_data.users -- 2023-01-01 00:20:19.000	2025-12-30 23:53:47.000
+Year	Month	Month Name	Month-Year	Users Count	Percentage
 
 
 
