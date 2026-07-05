@@ -124,7 +124,7 @@ These results provide a solid baseline for the subsequent analysis, where acquis
 The dataset is primarily composed of users labeled as **New** customers, while **Returning** customers represent a substantial minority of the user base.
 
 At the EDA stage, these values should be interpreted as customer classifications available in the dataset rather than validated behavioral patterns. Subsequent analyses should verify whether these labels are reflected in actual customer behavior, such as cart creation frequency, purchase completion, and cart abandonment rates.
-### **Users Volume by Customer Type**
+### **Users Volume Trend**
 ![users_volume_by_trend](./charts/6.users_volume_by_trend.png)
 #### **Key Findings**
 - User registrations remain remarkably stable throughout the three-year period, with no significant fluctuations in monthly registrations.
