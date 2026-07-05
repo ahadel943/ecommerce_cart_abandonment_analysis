@@ -42,13 +42,13 @@ order by "Users Count" desc;
 
 -- users count by acquisition_channel
 select
-	acquisition_channel,
-	count(*) as users_count,
-	sum(count(*)) over() as total_count,
-	count(*) / sum(count(*)) over() as perc
+	acquisition_channel as "Acquisition Channel",
+	count(*) as "Users Count",
+	sum(count(*)) over() as "Total Count",
+	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by acquisition_channel 
-order by users_count desc;
+group by "Acquisition Channel" 
+order by "Users Count" desc;
 
 -- users count by customer_type
 select
