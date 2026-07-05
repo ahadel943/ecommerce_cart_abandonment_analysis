@@ -47,18 +47,18 @@ select
 	sum(count(*)) over() as "Total Count",
 	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by "Acquisition Channel" 
+group by "Acquisition Channel"
 order by "Users Count" desc;
 
 -- users count by customer_type
 select
-	customer_type,
-	count(*) as users_count,
-	sum(count(*)) over() as total_count,
-	count(*) / sum(count(*)) over() as perc
+	customer_type as "Customer Type",
+	count(*) as "Users Count",
+	sum(count(*)) over() as "Total Count",
+	count(*) / sum(count(*)) over() as "Percentage"
 from analytics_data.users
-group by customer_type
-order by users_count desc;
+group by "Customer Type"
+order by "Users Count" desc;
 
 -- users sigup trend over time
 select

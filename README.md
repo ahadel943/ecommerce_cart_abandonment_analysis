@@ -114,8 +114,16 @@ The user base is acquired through a diverse mix of marketing channels, with **Or
 The similar user shares of **Direct** and **Social Media** indicate that both channels contribute comparable acquisition volumes, while **Paid Search**, **Referral**, and **Email** provide additional traffic at lower volumes.
 
 These results provide a solid baseline for the subsequent analysis, where acquisition channels can be evaluated not only by user volume but also by business outcomes such as cart abandonment, conversion rates, and completed purchases.
+### **Users Volume by Customer Type**
+![users_volume_by_customer_type](./charts/5.users_volume_by_customer_type.png)
+#### **Key Findings**
+- **New** customers account for **59.86%** of the total user base.
+- **Returning** customers represent **40.15%** of users.
+- The dataset contains approximately **20 percentage points** more new customers than returning customers, making new customers the dominant customer segment.
+#### **Business Interpretation**
+The dataset is primarily composed of users labeled as **New** customers, while **Returning** customers represent a substantial minority of the user base.
 
-
+At the EDA stage, these values should be interpreted as customer classifications available in the dataset rather than validated behavioral patterns. Subsequent analyses should verify whether these labels are reflected in actual customer behavior, such as cart creation frequency, purchase completion, and cart abandonment rates.
 
 
 
