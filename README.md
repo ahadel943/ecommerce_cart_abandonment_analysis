@@ -182,10 +182,16 @@ In the subsequent business analysis, product categories will be evaluated to det
 The product catalog is evenly distributed across all brands, with each brand contributing approximately one-quarter of the total inventory. This balanced distribution minimizes brand-level bias and provides a reliable foundation for comparing customer behavior across brands.
 
 In the business analysis phase, brand performance can be evaluated using metrics such as cart abandonment rate, conversion rate, and purchase volume to determine whether customer behavior differs by brand rather than by product availability.
+### **Products Distribution by Active Status**
+![products_distribution_by_avtive_status](./charts/11.products_distribution_by_avtive_status.png)
+#### **Key Findings**
+- **Active** products account for **95.12%** of the total product catalog.
+- **Not Active** products represent only **4.88%** of all products.
+- The dataset is predominantly composed of active products, indicating that the majority of the product catalog is currently available for customer interaction.
+#### **Business Interpretation**
+Most products in the dataset are marked as **Active**, while only a small proportion are classified as **Not Active**. This suggests that the product catalog is largely operational and available for customers.
 
-
-
-
+It is important to note that **product activity status should not be interpreted as inventory availability**. A product may remain active even when its stock reaches zero, as demonstrated during the data quality assessment. Therefore, product availability should be evaluated using both the **`is_active`** and **`stock`** attributes rather than relying on either field alone.
 
 
 

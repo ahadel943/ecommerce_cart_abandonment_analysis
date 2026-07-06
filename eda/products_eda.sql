@@ -25,7 +25,15 @@ from analytics_data.products
 group by "Brand"
 order by "Products Count" desc;
 
-
+-- products count by active status
+select
+	is_active as "Active Status",
+	count(*) as "Products Count",
+	sum(count(*)) over() as "Total Products Count", 
+	count(*) / sum(count(*)) over() as "Percentage"
+from analytics_data.products 
+group by "Active Status"
+order by "Products Count" desc;
 
 
 
