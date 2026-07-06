@@ -136,12 +136,19 @@ At the EDA stage, these values should be interpreted as customer classifications
 User registrations are consistently distributed throughout the observation period, with only minor month-to-month variations. Although the overall trend is slightly positive, the growth rate is modest, indicating that the platform experienced stable customer acquisition rather than periods of rapid expansion or decline.
 
 This stable acquisition pattern provides a reliable baseline for subsequent analyses, allowing changes in cart abandonment or conversion performance to be interpreted with minimal influence from large fluctuations in user registration volume.
+### **Users Volume by Age Group**
+![users_volume_by_age_group](./charts/7.users_volume_by_age_group.png)
+#### **Key Findings**
+- **Adults (25–34)** represent the largest age segment, accounting for **33.92%** of the total user base.
+- **Mid-age Adults (35–44)** are the second-largest group, contributing **28.70%** of users.
+- **Young Adults (18–24)** account for **23.42%** of the customer base.
+- **Mature Adults (45–54)** represent **11.72%** of all users.
+- **Seniors (55+)** make up the smallest age segment, accounting for only **2.24%** of the total user base.
+- Overall, the dataset is concentrated in the **25–44** age range, which represents over **62%** of all users.
+#### **Business Interpretation**
+The dataset is primarily composed of users between **25 and 44 years old**, indicating that the platform's customer base is concentrated in the core adult age segments. Younger and older users represent smaller proportions of the dataset.
 
-
-
-
-
-
+This demographic distribution provides a strong basis for evaluating whether shopping behavior varies across age groups. In the subsequent business analysis, age segments will be compared in terms of cart creation, checkout completion, and cart abandonment rates to determine whether customer age influences purchasing behavior.
 
 
 

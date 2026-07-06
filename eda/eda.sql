@@ -76,7 +76,42 @@ order by "Year", "Month";
 select 
 	min(signup_date) as "min", max(signup_date) as "max"
 from analytics_data.users -- 2023-01-01 00:20:19.000	2025-12-30 23:53:47.000
-Year	Month	Month Name	Month-Year	Users Count	Percentage
+
+-- users volume by age bucket
+select
+	case
+		when age between 18 and 24 then 'Young Adults'
+		when age between 25 and 34 then 'Adults'
+		when age between 35 and 44 then 'Mid-age Adults'
+		when age between 45 and 54 then 'Mature Adults'
+		else 'Seniors'
+	end as "Age Group",
+	count(*) as "Users Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from analytics_data.users
+group by "Age Group"
+order by "Users Count" desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
