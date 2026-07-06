@@ -159,6 +159,42 @@ This demographic distribution provides a strong basis for evaluating whether sho
 The user base is primarily composed of **non-premium customers**, while premium users represent a smaller but meaningful customer segment. This segmentation provides an opportunity to compare behavioral differences between premium and non-premium users during the business analysis phase.
 
 Subsequent analyses will evaluate whether premium membership is associated with differences in cart creation, checkout completion, purchase behavior, and cart abandonment rates.
+### **Products Distribution by category**
+![products_distribution_by_category](./charts/9.products_distribution_by_category.png)
+#### **Key Findings**
+- **Sports** is the largest product category, accounting for **21.06%** of the total product catalog.
+- **Fashion** is the second-largest category, representing **20.16%** of all products.
+- **Electronics** and **Beauty** contribute **20.02%** and **19.92%**, respectively.
+- **Home** contains the smallest number of products, accounting for **18.84%** of the catalog.
+- Product distribution is relatively balanced across all categories, with only a **2.22 percentage point** difference between the largest and smallest category.
+#### **Business Interpretation**
+The product catalog is **well-balanced** across the **five** major categories, with no single category dominating the inventory. This balanced distribution reduces category-level bias and provides a solid foundation for comparing customer behavior across different product categories.
+
+In the subsequent business analysis, product categories will be evaluated to determine whether cart abandonment, checkout completion, and purchasing behavior differ across categories.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
