@@ -149,11 +149,16 @@ This stable acquisition pattern provides a reliable baseline for subsequent anal
 The dataset is primarily composed of users between **25 and 44 years old**, indicating that the platform's customer base is concentrated in the core adult age segments. Younger and older users represent smaller proportions of the dataset.
 
 This demographic distribution provides a strong basis for evaluating whether shopping behavior varies across age groups. In the subsequent business analysis, age segments will be compared in terms of cart creation, checkout completion, and cart abandonment rates to determine whether customer age influences purchasing behavior.
+### **Users Volume by Premium Status**
+#### **Key Findings**
+![users_volume_by_premium_status](./charts/8.users_volume_by_premium_status.png)
+- **Non-Premium** users represent the majority of the customer base, accounting for **84.93%** of all users.
+- **Premium** users account for **15.07%** of the total user base.
+- The dataset is predominantly composed of standard users, with approximately **one out of every seven users** belonging to the premium segment.
+#### **Business Interpretation**
+The user base is primarily composed of **non-premium customers**, while premium users represent a smaller but meaningful customer segment. This segmentation provides an opportunity to compare behavioral differences between premium and non-premium users during the business analysis phase.
 
-
-
-
-
+Subsequent analyses will evaluate whether premium membership is associated with differences in cart creation, checkout completion, purchase behavior, and cart abandonment rates.
 
 
 

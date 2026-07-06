@@ -92,7 +92,13 @@ from analytics_data.users
 group by "Age Group"
 order by "Users Count" desc;
 
-
+-- users volume by premiuim status
+select 
+	is_premium as "Premium status",
+	count(*) as "Users Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from analytics_data.users
+group by is_premium;
 
 
 
