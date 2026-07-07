@@ -65,7 +65,59 @@ select
 from analytics_data.products
 where price > 1671.87;
 
+-- products count by price group
+/*
+Under 100
+100 - 300
+300 - 700
+700 - 1200
+1200 - 1700
+1700+
+*/
+with price_groups as (
+	select
+		case 
+			when price < 100 then 'Under 100'
+			when price < 300 then '100 - 300'
+			when price < 700 then '300 - 700'
+			when price < 1200 then '700 - 1200'
+			when price < 1700 then '1200 - 1700'
+			else '1700+'
+		end as price_group
+	from analytics_data.products
+)
+select 
+	price_group as "Price Group",
+	count(*) as "Products Count",
+	SUM(COUNT(*)) OVER () AS "Total Products Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from price_groups
+group by price_group
+order by 
+	case
+		when price_group = 'Under 100' then 1
+		when price_group = '100 - 300' then 2
+		when price_group = '300 - 700' then 3
+		when price_group = '700 - 1200' then 4
+		when price_group = '1200 - 1700' then 5
+		else 6
+	end;
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

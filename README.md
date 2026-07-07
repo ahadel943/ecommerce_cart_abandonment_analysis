@@ -217,10 +217,17 @@ It is important to note that **product activity status should not be interpreted
 The product catalog is primarily composed of products within the **low-to-mid** price range, while a relatively small proportion of **premium-priced** products extend the upper end of the distribution. This results in a slight positive (**right**) skew, which is commonly observed in e-commerce product catalogs.
 
 The presence of a limited number of **high-priced** products increases the average price without substantially affecting the median, making the **median** a more representative measure of the typical product price. These pricing characteristics provide useful context for subsequent analyses, such as evaluating whether product price influences cart abandonment behavior or purchase completion.
+### **Products Distribution by Price Bucket**
+![products_distribution_by_price_group](./charts/12.products_distribution_by_price_group.png)
+#### **Key Findings**
+- The **300–700** price range contains the largest share of products, accounting for **36.54%** of the product catalog.
+- The **700–1200** price range is the second largest, representing **27.52%** of all products.
+- Together, products priced between **300 and 1200** account for **64.06%** of the entire catalog, indicating that most products are concentrated within the mid-price range.
+- Only **4.16%** of products are priced above **1700**, making premium-priced products a relatively small segment of the catalog.
+#### **Business Interpretation**
+The product catalog is heavily concentrated in the **mid-price** range, with nearly two-thirds of all products priced between **300** and **1200**. This suggests that the business primarily targets customers seeking moderately priced products rather than premium offerings.
 
-
-
-
+The relatively small proportion of products priced above **1700** is consistent with the previous statistical analysis, which identified a limited number of high-price outliers using the IQR method. Together, both analyses indicate that while premium-priced products exist, they represent only a small fraction of the overall catalog and contribute to the slight right-skew observed in the price distribution.
 
 
 
