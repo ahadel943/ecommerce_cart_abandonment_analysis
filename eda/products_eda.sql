@@ -35,5 +35,39 @@ from analytics_data.products
 group by "Active Status"
 order by "Products Count" desc;
 
+-- products count by price bucket
+select
+	d."Avg Price",
+	d."Median",
+	d."Max Price",
+	d."Q1",
+	d."Q3",
+	d."Standard Deviation",
+	d."Q3" - d."Q1" as "IQR",
+	d."Max Price" - d."Min Price" as "Range",
+	d."Q1" - (1.5 * (d."Q3" - d."Q1")) as "Lower Bounds",
+	d."Q3" + (1.5 * (d."Q3" - d."Q1")) as "Upper Bound"
+from (
+	select
+		min(price) as "Min Price",
+		percentile_cont(0.25) within group (order by price) as "Q1",
+		percentile_cont(0.5) within group (order by price) as "Median",
+		percentile_cont(0.75) within group (order by price) as "Q3",
+		max(price) as "Max Price",
+		round(avg(price), 2) as "Avg Price",
+		round(stddev(price), 2) as "Standard Deviation"
+	from analytics_data.products
+) as d;
+
+-- price outliers count
+select
+	count(*) as "Upper Outliers Count"
+from analytics_data.products
+where price > 1671.87;
+
+	
+
+
+
 
 

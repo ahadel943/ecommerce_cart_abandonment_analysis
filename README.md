@@ -192,9 +192,31 @@ In the business analysis phase, brand performance can be evaluated using metrics
 Most products in the dataset are marked as **Active**, while only a small proportion are classified as **Not Active**. This suggests that the product catalog is largely operational and available for customers.
 
 It is important to note that **product activity status should not be interpreted as inventory availability**. A product may remain active even when its stock reaches zero, as demonstrated during the data quality assessment. Therefore, product availability should be evaluated using both the **`is_active`** and **`stock`** attributes rather than relying on either field alone.
+### **Price Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 5,000      |
+| Average        | 624.07     |
+| Median         | 559.765    |
+| Minimum        | 5.38       |
+| Q1             | 283.2525   |
+| Q3             | 838.70     |
+| IQR            | 555.45     |
+| Maximum        | 2902.08    |
+| Standard Deviation | 469.18 |
+| Upper Bound    | 1671.87    |
+| Lower Bound    | -549.91    |
+| Upper Outliers | 221 (4.42%)|
+#### **Key Findings**
+- Product prices range from **5.38** to **2,902.08**, indicating a wide variation in product pricing.
+- The **average price (624.07)** is slightly higher than the **median price (559.77)**, suggesting a **slight right-skewed** price distribution driven by a small number of high-priced products.
+- The middle **50%** of product prices fall between **283.25 (Q1)** and **838.70 (Q3)**, resulting in an **Interquartile Range (IQR)** of **555.45**.
+- Based on the IQR method, the calculated **upper bound** is **1,671.87**, with **221 products (4.42%)** identified as high-price outliers.
+- No lower-price outliers were detected, as the calculated lower bound (**-549.91**) falls below the minimum observed product price.
+#### **Business Interpretation**
+The product catalog is primarily composed of products within the **low-to-mid** price range, while a relatively small proportion of **premium-priced** products extend the upper end of the distribution. This results in a slight positive (**right**) skew, which is commonly observed in e-commerce product catalogs.
 
-
-
+The presence of a limited number of **high-priced** products increases the average price without substantially affecting the median, making the **median** a more representative measure of the typical product price. These pricing characteristics provide useful context for subsequent analyses, such as evaluating whether product price influences cart abandonment behavior or purchase completion.
 
 
 
