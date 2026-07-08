@@ -290,10 +290,18 @@ The relatively small proportion of products with costs above **1,100** aligns wi
 Most products generate relatively modest profit margins, while a small proportion of products deliver substantially higher margins. These high-margin products create a slight positive (right) skew in the overall margin distribution without affecting the majority of the catalog.
 
 The margin distribution closely mirrors the previously observed price and cost distributions. This consistency indicates that products with exceptionally high selling prices also tend to have higher costs and margins, suggesting that the pricing structure remains relatively balanced across the product catalog.
+### **Margin Distribution by Cost Groups**
+![products_distribution_by_margin_group](./charts/14.products_distribution_by_margin_group.png)
+#### **Key Findings**
+- The **Under 100** margin group contains the largest share of products, accounting for **26.94%** of the product catalog.
+- Products with margins between **100–179** and **180–259** represent **22.50%** and **19.86%**, respectively.
+- Together, products with margins below **260** account for **69.30%** of the entire catalog, indicating that most products generate relatively modest profit margins.
+- Products with margins above **580** represent only **4.58%** of the catalog, closely matching the percentage of high-margin outliers identified in the statistical analysis.
+- The **500–579** margin group is the smallest, accounting for just **1.52%** of all products.
+#### **Business Interpretation**
+The majority of products generate relatively low to moderate profit margins, with nearly **70%** of the catalog producing margins below **260**. This indicates that the business primarily relies on a large volume of products with modest profitability rather than a small number of highly profitable items.
 
-
-
-
+Only a small proportion of products (**4.58%**) generate margins above **580**, which aligns closely with the outlier analysis performed using the IQR method. These high-margin products represent a premium segment of the catalog and may warrant further investigation to understand whether they also contribute disproportionately to revenue, conversion rates, or overall profitability.
 
 
 

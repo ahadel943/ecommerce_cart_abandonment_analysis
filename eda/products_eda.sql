@@ -202,6 +202,41 @@ where price - cost > 581.892; -- 228 outliers found
 
 select 228*100.0 / 5000 -- 4.56%
 
+-- products count by margin groups
+with margin_groups as (
+	select
+		case
+			when price - cost < 100 then 'Under 100'
+			when price - cost < 180 then '100 - 179'
+			when price - cost < 260 then '180 - 259'
+			when price - cost < 340 then '260 - 339'
+			when price - cost < 420 then '340 - 419'
+			when price - cost < 500 then '420 - 499'
+			when price - cost < 580 then '500 - 579'
+			else '580+'
+		end as margin_group
+	from analytics_data.products
+)
+select
+	margin_group as "Margin Group",
+	count(*) as "Products Count",
+	sum(count(*)) over() as "Total Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from margin_groups
+group by margin_group
+order by 
+	case
+		when margin_group = 'Under 100' then 1
+		when margin_group = '100 - 179' then 2
+		when margin_group = '180 - 259' then 3
+		when margin_group = '260 - 339' then 4
+		when margin_group = '340 - 419' then 5
+		when margin_group = '420 - 499' then 6
+		when margin_group = '500 - 579' then 7
+		else 8
+	end;
+	
+
 
 
 
