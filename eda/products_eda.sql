@@ -35,7 +35,7 @@ from analytics_data.products
 group by "Active Status"
 order by "Products Count" desc;
 
--- products count by price bucket
+-- price distribution analysis
 select
 	d."Avg Price",
 	d."Median",
@@ -102,9 +102,36 @@ order by
 		when price_group = '1200 - 1700' then 5
 		else 6
 	end;
-	
 
+-- cost distribution analysis
+select
+	d."Average",
+	d."Minimum",
+	d."Median",
+	d."Q1",
+	d."Q3",
+	d."Maximum",
+	d."Standard Deviation",
+	d."Q3" - d."Q1" as "IQR",
+	d."Q1" - (1.5 * (d."Q3" - d."Q1")) as "Lower Bounds",
+	d."Q3" + (1.5 * (d."Q3" - d."Q1")) as "Upper Bounds" 
+from (
+	select
+		min(cost) as "Minimum",
+		round(avg(cost), 2) as "Average",
+		percentile_cont(0.25) within group (order by cost) as "Q1",
+		percentile_cont(0.5) within group (order by cost) as "Median",
+		percentile_cont(0.75) within group (order by cost) as "Q3",
+		max(cost) as "Maximum",
+		round(stddev(cost), 2) as "Standard Deviation"
+	from analytics_data.products
+) as d;
 
+select
+	count(*) as "Outliers Count",
+	count(*) / 5000
+from analytics_data.products
+where cost > 1082.87; -- 231 positive outliers 
 
 
 

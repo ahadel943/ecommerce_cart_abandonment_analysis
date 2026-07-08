@@ -228,9 +228,31 @@ The presence of a limited number of **high-priced** products increases the avera
 The product catalog is heavily concentrated in the **mid-price** range, with nearly two-thirds of all products priced between **300** and **1200**. This suggests that the business primarily targets customers seeking moderately priced products rather than premium offerings.
 
 The relatively small proportion of products priced above **1700** is consistent with the previous statistical analysis, which identified a limited number of high-price outliers using the IQR method. Together, both analyses indicate that while premium-priced products exist, they represent only a small fraction of the overall catalog and contribute to the slight right-skew observed in the price distribution.
+### **Cost Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 5,000      |
+| Average        | 406.29     |
+| Median         | 355.155    |
+| Minimum        | 3.22       |
+| Q1             | 178.9075   |
+| Q3             | 540.4925   |
+| IQR            | 361.584    |
+| Maximum        | 2069.21    |
+| Standard Deviation | 312.71 |
+| Upper Bound    | 1082.87    |
+| Lower Bound    | -363.469   |
+| Upper Outliers | 231 (4.62%)|
+#### **Key Findings**
+- Product costs range from **3.22** to **2,069.21**, indicating substantial variation in product costs.
+- The **average cost (406.29)** is slightly higher than the **median cost (355.16)**, suggesting a **slight right-skewed** cost distribution.
+- The middle 50% of product costs fall between **178.91 (Q1)** and **540.49 (Q3)**, resulting in an **Interquartile Range (IQR)** of **361.58**.
+- Based on the IQR method, the calculated **upper bound** is **1,082.87**, with **231 products (4.62%)** identified as high-cost outliers.
+- No lower-cost outliers were detected since the calculated lower bound (**-363.47**) is below the minimum observed cost.
+#### **Business Interpretation**
+Most products have relatively low to moderate costs, while a small proportion of products incur substantially higher costs. These high-cost products create a slight positive (right) skew in the cost distribution without affecting the majority of the catalog.
 
-
-
+Understanding the cost distribution provides valuable context for subsequent profitability analysis. In the next stage of the EDA, product margins (**Price − Cost**) will be examined to assess how product costs translate into profitability across the catalog.
 
 
 
