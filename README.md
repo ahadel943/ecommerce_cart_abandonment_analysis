@@ -265,9 +265,31 @@ Understanding the cost distribution provides valuable context for subsequent pro
 The product catalog is primarily composed of products with low to moderate costs, with nearly three-quarters of all products costing between **100** and **699**. This indicates that the majority of inventory is concentrated within the core operating cost range.
 
 The relatively small proportion of products with costs above **1,100** aligns with the previous statistical analysis, where only **4.62%** of products were identified as high-cost outliers using the IQR method. This consistency reinforces that high-cost products represent only a small portion of the overall catalog.
+### **Margin Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 5,000      |
+| Average        | 217.78     |
+| Median         | 182.18     |
+| Minimum        | 1.46       |
+| Q1             | 93.43      |
+| Q3             | 288.815    |
+| IQR            | 195.385    |
+| Maximum        | 1336.34    |
+| Standard Deviation | 177.48 |
+| Upper Bound    | 581.892    |
+| Lower Bound    | -199.647   |
+| Upper Outliers | 228 (4.56%)|
+#### **Key Findings**
+- Product margins range from **1.46** to **1,336.34**, indicating considerable variation in profitability across products.
+- The **average margin (217.78)** is slightly higher than the **median margin (182.18)**, suggesting a **slight right-skewed** margin distribution.
+- The middle 50% of product margins fall between **93.43 (Q1)** and **288.82 (Q3)**, resulting in an **Interquartile Range (IQR)** of **195.39**.
+- Based on the IQR method, the calculated **upper bound** is **581.89**, with **228 products (4.56%)** identified as high-margin outliers.
+- No lower-margin outliers were detected, as the calculated lower bound (**-199.65**) is below the minimum observed margin.
+#### **Business Interpretation**
+Most products generate relatively modest profit margins, while a small proportion of products deliver substantially higher margins. These high-margin products create a slight positive (right) skew in the overall margin distribution without affecting the majority of the catalog.
 
-
-
+The margin distribution closely mirrors the previously observed price and cost distributions. This consistency indicates that products with exceptionally high selling prices also tend to have higher costs and margins, suggesting that the pricing structure remains relatively balanced across the product catalog.
 
 
 

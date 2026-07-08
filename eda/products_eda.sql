@@ -165,7 +165,42 @@ order by
 		else 7
 	end;
 	
+-- margin distribution analysis
+with margin_calc as (
+	select
+		price - cost as "Margin"
+	from analytics_data.products
+)
+select
+	d."Minimum",
+	d."Q1",
+	d."Median",
+	d."Q3",
+	d."Average",
+	d."Standard Deviation",
+	d."Maximum",
+	d."Q3" - d."Q1" as "IQR",
+	d."Q1" - (1.5 * (d."Q3" - d."Q1")) as "Lower Bounds",
+	d."Q3" + (1.5 * (d."Q3" - d."Q1")) as "Upper Bounds"
+from (
+	select
+		min("Margin") as "Minimum",
+		percentile_cont(0.25) within group (order by "Margin") as "Q1",
+		percentile_cont(0.5) within group (order by "Margin") as "Median",
+		percentile_cont(0.75) within group (order by "Margin") as "Q3",
+		round(avg("Margin"), 2) as "Average",
+		round(stddev("Margin"), 2) as "Standard Deviation",
+		max("Margin") as "Maximum"
+	from margin_calc
+) as d
 
+-- outliers count
+select 
+	count(price - cost) as "Positive Outliers Count"
+from analytics_data.products
+where price - cost > 581.892; -- 228 outliers found
+
+select 228*100.0 / 5000 -- 4.56%
 
 
 
