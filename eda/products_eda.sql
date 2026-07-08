@@ -89,7 +89,7 @@ with price_groups as (
 select 
 	price_group as "Price Group",
 	count(*) as "Products Count",
-	SUM(COUNT(*)) OVER () AS "Total Products Count",
+	sum(count(*)) over () as "Total Products Count",
 	count(*) / sum(count(*)) over() as "Percentage"
 from price_groups
 group by price_group
@@ -133,8 +133,38 @@ select
 from analytics_data.products
 where cost > 1082.87; -- 231 positive outliers 
 
-
-
+-- products count by cost group
+with cost_groups as (
+	select
+		case
+			when cost < 100 then 'Under 100'
+			when cost < 300 then '100 - 299'
+			when cost < 450 then '300 - 449'
+			when cost < 700 then '450 - 699'
+			when cost < 950 then '700 - 949'
+			when cost < 1100 then '950 - 1099'
+			else '1100+'
+		end as cost_group
+	from analytics_data.products
+)
+select
+	cost_group as "Cost Group",
+	count(*) as "Products Count",
+	sum(count(*)) over () as "Total Products Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from cost_groups
+group by cost_group
+order by
+	case
+		when cost_group = 'Under 100' then 1
+		when cost_group = '100 - 299' then 2
+		when cost_group = '300 - 449' then 3
+		when cost_group = '450 - 699' then 4
+		when cost_group = '700 - 949' then 5
+		when cost_group = '950 - 1099' then 6
+		else 7
+	end;
+	
 
 
 

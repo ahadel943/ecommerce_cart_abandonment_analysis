@@ -253,9 +253,18 @@ The relatively small proportion of products priced above **1700** is consistent 
 Most products have relatively low to moderate costs, while a small proportion of products incur substantially higher costs. These high-cost products create a slight positive (right) skew in the cost distribution without affecting the majority of the catalog.
 
 Understanding the cost distribution provides valuable context for subsequent profitability analysis. In the next stage of the EDA, product margins (**Price − Cost**) will be examined to assess how product costs translate into profitability across the catalog.
+### **Products Distribution by Cost Groups**
+![products_distribution_by_cost_group](./charts/13.products_distribution_by_cost_group.png)
+#### **Key Findings**
+- The **100–299** cost range contains the largest share of products, accounting for **28.68%** of the product catalog.
+- Products with costs between **450–699** and **300–449** account for **24.46%** and **21.28%**, respectively.
+- Together, products costing between **100** and **699** represent **74.42%** of the entire catalog, indicating that most products are concentrated within the low-to-mid cost range.
+- Only **4.44%** of products have costs exceeding **1,100**, making high-cost products a relatively small segment of the catalog.
+- The **950–1099** cost group is the smallest, accounting for only **2.00%** of all products.
+#### **Business Interpretation**
+The product catalog is primarily composed of products with low to moderate costs, with nearly three-quarters of all products costing between **100** and **699**. This indicates that the majority of inventory is concentrated within the core operating cost range.
 
-
-
+The relatively small proportion of products with costs above **1,100** aligns with the previous statistical analysis, where only **4.62%** of products were identified as high-cost outliers using the IQR method. This consistency reinforces that high-cost products represent only a small portion of the overall catalog.
 
 
 
