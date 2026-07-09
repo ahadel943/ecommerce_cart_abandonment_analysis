@@ -316,9 +316,30 @@ Only a small proportion of products (**4.58%**) generate margins above **580**, 
 - The **standard deviation (0.72)** indicates relatively low variability, meaning that most product ratings are clustered around the average.
 #### **Business Interpretation**
 Overall, product ratings are consistently high across the catalog, with limited variation between products. This suggests that the dataset does not contain substantial differences in customer satisfaction at the EDA stage. Any relationship between product ratings and cart abandonment or purchase behavior should therefore be investigated during the business analysis rather than inferred from the distribution alone.
+### **Stock Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 5,000      |
+| Average        | 250.91     |
+| Median         | 250        |
+| Minimum        | 0          |
+| Q1             | 124        |
+| Q3             | 376        |
+| IQR            | 252        |
+| Maximum        | 500        |
+| Standard Deviation | 144.40 |
+| Upper Bound    | 754        |
+| Lower Bound    | -254       |
+#### **Key Findings**
+- Product stock levels range from **0** to **500** units.
+- The **average stock (250.91)** is nearly identical to the **median stock (250)**, indicating an approximately symmetric distribution.
+- The middle 50% of products have stock levels between **124 (Q1)** and **376 (Q3)**, resulting in an **Interquartile Range (IQR)** of **252** units.
+- Based on the IQR method, **no upper or lower outliers** were identified, as all stock values fall within the calculated bounds.
+- Only **11 products** currently have **zero stock**, representing a very small proportion (**0.22%**) of the product catalog.
+#### **Business Interpretation**
+The inventory appears to be well distributed across the product catalog, with no evidence of unusually high or unusually low stock levels. The balanced distribution suggests that inventory allocation is generally consistent across products.
 
-
-
+Although only **11 products** are currently out of stock, these products may still affect customer experience if they receive shopping traffic. Their impact on cart abandonment and purchasing behavior will be explored during the business analysis phase.
 
 
 

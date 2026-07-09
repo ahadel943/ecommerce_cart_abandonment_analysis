@@ -245,6 +245,41 @@ select
 	round(stddev(rating), 2) as "Standard Deviation"
 from analytics_data.products;
 
+-- stock distribution analysis
+select
+	d."Minimum",
+	d."Q1",
+	d."Median",
+	d."Q3",
+	d."Average",
+	d."Maximum",
+	d."Standard Deviation",
+	d."Q3" - d."Q1" as "IQR",
+	d."Q1" - (1.5 * (d."Q3" - d."Q1")) as "Lower Bounds",
+	d."Q3" + (1.5 * (d."Q3" - d."Q1")) as "Upper Bounds"
+from (
+	select
+		min(stock) as "Minimum",
+		percentile_cont(0.25) within group (order by stock) as "Q1",
+		percentile_cont(0.5) within group (order by stock) as "Median",
+		percentile_cont(0.75) within group (order by stock) as "Q3",
+		round(avg(stock), 2) as "Average",
+		max(stock) as "Maximum",
+		round(stddev(stock), 2) as "Standard Deviation"
+	from analytics_data.products
+) as d;
+
+select
+	count(*)
+from analytics_data.products
+where stock = 0; -- 11 products with 0 stock
+
+
+
+
+
+
+
 
 
 
