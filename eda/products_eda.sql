@@ -272,7 +272,7 @@ from (
 select
 	count(*)
 from analytics_data.products
-where stock > 500; -- 11 products with 0 stock
+where stock = 500; -- 11 products with 0 stock
 
 -- products count by margin groups
 with stock_groups as (
@@ -304,6 +304,8 @@ order by
 		else 6
 	end;
 	
+
+
 
 
 
