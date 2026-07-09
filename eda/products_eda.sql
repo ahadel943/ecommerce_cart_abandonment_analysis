@@ -272,7 +272,60 @@ from (
 select
 	count(*)
 from analytics_data.products
-where stock = 0; -- 11 products with 0 stock
+where stock > 500; -- 11 products with 0 stock
+
+-- products count by margin groups
+with stock_groups as (
+	select
+		case
+			when stock < 100 then 'Under 100'
+			when stock < 200 then '100 - 199'
+			when stock < 300 then '200 - 299'
+			when stock < 400 then '300 - 399'
+			when stock < 500 then '400 - 499'
+			else '500'
+		end as stock_group
+	from analytics_data.products
+)
+select
+	stock_group as "Stock Group",
+	count(*) as "Products Count",
+	sum(count(*)) over() as "Total Count",
+	count(*) / sum(count(*)) over() as "Percentage"
+from stock_groups
+group by stock_group
+order by 
+	case
+		when stock_group = 'Under 100' then 1
+		when stock_group = '100 - 199' then 2
+		when stock_group = '200 - 299' then 3
+		when stock_group = '300 - 399' then 4
+		when stock_group = '400 - 499' then 5
+		else 6
+	end;
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

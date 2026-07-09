@@ -340,9 +340,17 @@ Overall, product ratings are consistently high across the catalog, with limited 
 The inventory appears to be well distributed across the product catalog, with no evidence of unusually high or unusually low stock levels. The balanced distribution suggests that inventory allocation is generally consistent across products.
 
 Although only **11 products** are currently out of stock, these products may still affect customer experience if they receive shopping traffic. Their impact on cart abandonment and purchasing behavior will be explored during the business analysis phase.
+### **Products Distribution by Stock Groups**
+![products_distribution_by_stock_group](./charts/15.products_distribution_by_stock_group.png)
+#### **Key Findings**
+- Product inventory is distributed fairly evenly across the main stock groups, with each group accounting for approximately **19–20%** of the product catalog.
+- The **400–499** stock group contains the largest share of products (**20.44%**), followed closely by the **Under 100** (**20.10%**) and **300–399** (**20.06%**) groups.
+- No single stock group dominates the inventory distribution, indicating a balanced allocation of stock levels across products.
+- Only **7 products (0.14%)** have the maximum stock level of **500 units**, making them a very small segment of the catalog.
+#### **Business Interpretation**
+Inventory levels are well balanced across the product catalog, with products spread almost uniformly across the defined stock ranges. This balanced distribution suggests that inventory is not heavily concentrated in either low-stock or high-stock products.
 
-
-
+Only a handful of products have reached the maximum inventory level (**500 units**), indicating that very few products are stocked at the upper inventory limit. Whether these highly stocked products correspond to best-selling items or slow-moving inventory requires further business analysis.
 
 
 
