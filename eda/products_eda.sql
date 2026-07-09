@@ -236,7 +236,14 @@ order by
 		else 8
 	end;
 	
-
+-- rating distribution analysis
+select 
+	min(rating) as "Minimum",
+	round(avg(rating), 2) as "Average",
+	percentile_cont(0.5) within group (order by rating) as "Median",
+	max(rating) as "Maximum",
+	round(stddev(rating), 2) as "Standard Deviation"
+from analytics_data.products;
 
 
 

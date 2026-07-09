@@ -302,6 +302,35 @@ The margin distribution closely mirrors the previously observed price and cost d
 The majority of products generate relatively low to moderate profit margins, with nearly **70%** of the catalog producing margins below **260**. This indicates that the business primarily relies on a large volume of products with modest profitability rather than a small number of highly profitable items.
 
 Only a small proportion of products (**4.58%**) generate margins above **580**, which aligns closely with the outlier analysis performed using the IQR method. These high-margin products represent a premium segment of the catalog and may warrant further investigation to understand whether they also contribute disproportionately to revenue, conversion rates, or overall profitability.
+### **Rating Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Minimum        | 2.5        |
+| Average        | 3.75       |
+| Median         | 3.70       |
+| Maximum        | 5          |
+| Standard Deviation | 0.72   |
+#### **Key Findings**
+- Product ratings range from **2.5** to **5.0**, indicating that all products have relatively positive customer ratings.
+- The **average rating (3.75)** is very close to the **median rating (3.70)**, suggesting a nearly symmetric distribution with a slight right skew.
+- The **standard deviation (0.72)** indicates relatively low variability, meaning that most product ratings are clustered around the average.
+#### **Business Interpretation**
+Overall, product ratings are consistently high across the catalog, with limited variation between products. This suggests that the dataset does not contain substantial differences in customer satisfaction at the EDA stage. Any relationship between product ratings and cart abandonment or purchase behavior should therefore be investigated during the business analysis rather than inferred from the distribution alone.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
