@@ -290,7 +290,7 @@ The relatively small proportion of products with costs above **1,100** aligns wi
 Most products generate relatively modest profit margins, while a small proportion of products deliver substantially higher margins. These high-margin products create a slight positive (right) skew in the overall margin distribution without affecting the majority of the catalog.
 
 The margin distribution closely mirrors the previously observed price and cost distributions. This consistency indicates that products with exceptionally high selling prices also tend to have higher costs and margins, suggesting that the pricing structure remains relatively balanced across the product catalog.
-### **Margin Distribution by Cost Groups**
+### **Products Distribution by Margin Groups**
 ![products_distribution_by_margin_group](./charts/14.products_distribution_by_margin_group.png)
 #### **Key Findings**
 - The **Under 100** margin group contains the largest share of products, accounting for **26.94%** of the product catalog.
