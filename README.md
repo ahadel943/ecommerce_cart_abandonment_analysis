@@ -380,3 +380,11 @@ The difference between the total number of carts (**361,028**) and unique users 
 A large majority of users created multiple carts during the analysis period, while only a small proportion interacted with the shopping cart once. This indicates that users frequently returned to create additional shopping sessions, providing sufficient repeated behavior for further analysis.
 
 However, c**reating multiple carts should not be interpreted as customer retention or repeat purchasing on its own**. A user may create several carts without completing any purchase. Confirming customer retention or repeat purchase behavior requires analyzing completed orders and purchase history, which will be addressed in later stages of the project.
+### **Cart Status Distribution**
+#### **Key Findings**
+- All **361,028** carts (**100%**) have the same status: **Active**.
+- No variation exists in the `status` column, making it unsuitable for segmentation or comparative analysis.
+#### **Business Interpretation**
+The `status` field does not provide meaningful analytical value in the current dataset because every cart shares the same value (**Active**). This suggests that the column functions as a default or system-generated status rather than representing the actual lifecycle of a shopping cart.
+
+As a result, the `status` column will not be used in subsequent analyses. Instead, cart outcomes (e.g., **completed purchase** vs. **abandoned cart**) will be determined using related transactional tables such as **orders** and **checkout_attempts**, which provide the actual business events required for cart abandonment analysis.

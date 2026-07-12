@@ -86,9 +86,32 @@ with users_cart_count as (
 )
 select 
 	count(*) as "One-Cart Users Count",
-	(select count(*) from users_cart_count) - count(*) as "Multi-Cart Users Count"
+	(select count(*) from users_cart_count) - count(*) as "Multi-Cart Users Count",
+	(select count(*) from users_cart_count) as "Total Users Count"
 from users_cart_count
 where "Cart Count" = 1;
+
+-- cart status distribution
+select 
+	status as "Status",
+	count(*) as "Cart Count"
+from analytics_data.carts
+group by status;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
