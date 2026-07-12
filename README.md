@@ -415,6 +415,39 @@ Although the overall trendline is marginally negative while each individual year
 Most users created multiple carts over the analysis period, with a typical user generating around **4 shopping carts**. The close proximity of the mean and median indicates that cart creation behavior is fairly consistent across users, without extreme concentration among a small group of highly active users.
 
 While the distribution shows a slight left skew, the difference between the mean and median is minimal, suggesting that user cart creation is generally well distributed rather than heavily influenced by outliers.
+### **ََProducts Quantity Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 1,083,844  |
+| Average        | 2          |
+| Median         | 2          |
+| Minimum        | 1.46       |
+| Q1             | 1          |
+| Q3             | 3          |
+| IQR            | 2          |
+| Maximum        | 3          |
+| Standard Deviation | 0.82   |
+| Upper Bound    | 6          |
+| Lower Bound    | -2         |
+#### **Key Findings**
+- Product quantities per cart item range from **1** to **3** units.
+- The average and median quantity are both **approximately 2** units, indicating a highly balanced distribution.
+- The interquartile range (**IQR = 2**) and outlier analysis identified **no positive or negative outliers**, as all quantities fall within the expected bounds (**-2 to 6**).
+- The standard deviation (**0.82**) indicates **low** variability in product quantities across cart items.
+#### **Business Interpretation**
+The quantity distribution is highly consistent, with most cart items containing only a small number of units. This suggests that customers typically add products in modest quantities rather than purchasing large quantities of the same item within a single cart.
+
+The absence of outliers and the low standard deviation indicate a stable quantity distribution, making this variable unlikely to introduce bias in subsequent cart abandonment analyses.
+
+
+
+
+
+
+
+
+
+
 
 
 
