@@ -110,8 +110,20 @@ from analytics_data.carts
 group by "Year", "Month Number", "Month Name", "Date"
 order by "Year", "Month Number", "Month Name", "Date";
 
-
-
+-- distribution of carts per user
+with users_cart_count as (
+	select
+		user_id as "User Id",
+		count(*) as "Cart Count"
+	from analytics_data.carts
+	group by user_id
+)
+select
+	min("Cart Count") as "Minimum",
+	round(avg("Cart Count"), 2) as "Average",
+	percentile_cont(0.5) within group (order by "Cart Count") as "Median",
+	max("Cart Count") as "Maximum"
+from users_cart_count;
 
 
 

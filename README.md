@@ -399,3 +399,26 @@ As a result, the `status` column will not be used in subsequent analyses. Instea
 The dataset demonstrates a consistent flow of cart creation throughout the observation period without significant fluctuations, seasonal spikes, or abrupt declines. This stability suggests that the synthetic dataset was generated with a relatively uniform distribution of cart activity over time.
 
 Although the overall trendline is marginally negative while each individual year shows a slight positive trend, the magnitude of all slope values is extremely small. Therefore, these trends should be interpreted as **minor directional changes rather than meaningful business growth or decline**.
+### **Carts Distribution per User**
+| Metric         | Value      |
+| -------------- | -----------|
+| Minimum        | 1          |
+| Average        | 3.61       |
+| Median         | 4          |
+| Maximum        | 12         |
+#### **Key Findings**
+- Users created between **1** and **12** carts during the observation period.
+- The average number of carts per user is **3.61**, while the median is **4** carts.
+- The small difference between the mean and median suggests that the distribution is relatively balanced, with a slight tendency toward a **left-skewed** distribution.
+- Half of all users created **4 carts or fewer**, while the other half created **4 carts or more**.
+#### **Business Interpretation**
+Most users created multiple carts over the analysis period, with a typical user generating around **4 shopping carts**. The close proximity of the mean and median indicates that cart creation behavior is fairly consistent across users, without extreme concentration among a small group of highly active users.
+
+While the distribution shows a slight left skew, the difference between the mean and median is minimal, suggesting that user cart creation is generally well distributed rather than heavily influenced by outliers.
+
+
+
+
+
+
+
