@@ -29,7 +29,36 @@ from (
 	from analytics_data.cart_items
 ) as d;
 
+select count(*)
+from analytics_data.cart_items
+where quantity > 6; -- No Positive outleirs found
 
+select count(*)
+from analytics_data.cart_items
+where quantity = 1;
+/*
+ * quantity = 3, 361,897 
+ * quantity = 2, 360,441
+ * quantity = 1, 361,506
+ */
+
+-- cart size analysis
+with items_count_by_cart as (
+	select
+		cart_id as "Cart ID",
+		count(cart_item_id) as "Cart Item Count"
+	from analytics_data.cart_items
+	group by cart_id
+)
+select
+	min("Cart Item Count") as "Minimum",
+	round(avg("Cart Item Count"), 2) as "Average",
+	percentile_cont(0.25) within group (order by "Cart Item Count") as "Q1",
+	percentile_cont(0.5) within group (order by "Cart Item Count") as "Median",
+	percentile_cont(0.75) within group (order by "Cart Item Count") as "Q3",
+	max("Cart Item Count") as "Maximum",
+	round(stddev("Cart Item Count"), 2) as "Standard Deviation"
+from items_count_by_cart;
 
 
 

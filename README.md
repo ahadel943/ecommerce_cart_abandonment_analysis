@@ -421,7 +421,7 @@ While the distribution shows a slight left skew, the difference between the mean
 | Count          | 1,083,844  |
 | Average        | 2          |
 | Median         | 2          |
-| Minimum        | 1.46       |
+| Minimum        | 1          |
 | Q1             | 1          |
 | Q3             | 3          |
 | IQR            | 2          |
@@ -438,16 +438,28 @@ While the distribution shows a slight left skew, the difference between the mean
 The quantity distribution is highly consistent, with most cart items containing only a small number of units. This suggests that customers typically add products in modest quantities rather than purchasing large quantities of the same item within a single cart.
 
 The absence of outliers and the low standard deviation indicate a stable quantity distribution, making this variable unlikely to introduce bias in subsequent cart abandonment analyses.
-
-
-
-
-
-
-
-
-
-
+### **ََProducts Quantity Distribution by Quantity**
+#### **Key Findings**
+- Product quantity is limited to **three possible values (1, 2, and 3 units)**.
+- The three quantity levels are almost equally distributed, each representing approximately one-third of all cart items.
+- Due to this limited and balanced distribution, additional quantity bucketing would not provide meaningful analytical value.
+### **ََCart Size Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Minimum        | 1          |
+| Q1             | 2          |
+| Median         | 3          |
+| Average        | 3.00       |
+| Q3             | 4          |
+| Maximum        | 5          |
+| Standard Deviation | 1.41   |
+#### **Key Findings**
+- The typical shopping cart contains **3 products**.
+- Half of all carts contain between **2 and 4 products**.
+- Cart sizes range from **1 to 5 products**, indicating a relatively narrow distribution.
+- The close agreement between the mean and median, together with the low standard deviation, suggests a stable and well-balanced cart size distribution.
+#### **Business Interpretation**
+Customers generally create shopping carts containing a small number of products, with most carts holding **2 to 4** items. The stable distribution of cart sizes makes this variable suitable for further analysis, where its relationship with cart abandonment and checkout completion will be examined.
 
 
 
