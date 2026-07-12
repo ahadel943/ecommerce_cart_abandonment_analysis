@@ -370,8 +370,13 @@ Only a handful of products have reached the maximum inventory level (**500 units
 The dataset provides **full coverage of the registered user base**, as every user created at least one cart during the observation period. This ensures that cart abandonment analysis represents the entire customer population rather than a subset of active users.
 
 The difference between the total number of carts (**361,028**) and unique users (**100,000**) also indicates repeated cart creation behavior, suggesting that many customers interacted with the shopping process multiple times. This makes the dataset suitable for analyzing abandonment patterns across multiple shopping sessions instead of only first-time cart creation.
+### **Repeat Cart Creation Behavior**
+![repeat_cart_creation_behavior](./charts/17.repeat_cart_creation_behavior.png)
+#### **Key Findings**
+- Out of **100,000** users, **15,751** users (**15.75%**) created only one cart during the observation period.
+- The remaining **84,249** users (**84.25%**) created two or more carts, indicating that multiple cart creation is the dominant behavior in the dataset.
+- This suggests that repeated shopping-cart activity is common among users rather than being limited to a single shopping session.
+#### **Business Interpretation**
+A large majority of users created multiple carts during the analysis period, while only a small proportion interacted with the shopping cart once. This indicates that users frequently returned to create additional shopping sessions, providing sufficient repeated behavior for further analysis.
 
-
-
-
-
+However, c**reating multiple carts should not be interpreted as customer retention or repeat purchasing on its own**. A user may create several carts without completing any purchase. Confirming customer retention or repeat purchase behavior requires analyzing completed orders and purchase history, which will be addressed in later stages of the project.

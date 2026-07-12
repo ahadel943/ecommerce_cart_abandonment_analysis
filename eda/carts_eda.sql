@@ -71,8 +71,33 @@ and cart creation (e.g., time-to-first-cart or user onboarding analysis) were in
 All other analyses were performed using the complete dataset.
 */
 
+-- cart adoption rate
 select count(distinct user_id)
 from analytics_data.carts;
+
+-- users with one cart vs. users with more then one cart
+with users_cart_count as (
+	select 
+		user_id as "User ID",
+		count(*) as "Cart Count"
+	from analytics_data.carts
+	group by user_id
+	order by "Cart Count" desc
+)
+select 
+	count(*) as "One-Cart Users Count",
+	(select count(*) from users_cart_count) - count(*) as "Multi-Cart Users Count"
+from users_cart_count
+where "Cart Count" = 1;
+
+
+
+
+
+
+
+
+
 
 
 
