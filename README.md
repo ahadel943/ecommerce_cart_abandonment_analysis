@@ -388,3 +388,14 @@ However, c**reating multiple carts should not be interpreted as customer retenti
 The `status` field does not provide meaningful analytical value in the current dataset because every cart shares the same value (**Active**). This suggests that the column functions as a default or system-generated status rather than representing the actual lifecycle of a shopping cart.
 
 As a result, the `status` column will not be used in subsequent analyses. Instead, cart outcomes (e.g., **completed purchase** vs. **abandoned cart**) will be determined using related transactional tables such as **orders** and **checkout_attempts**, which provide the actual business events required for cart abandonment analysis.
+### **Cart Creation Trend**
+![cart_creation_trend](./charts/18.cart_creation_trend.png)
+#### **Key Findings**
+- Cart creation activity remained highly stable throughout the three-year period, with monthly contributions ranging from **2.55%** to **2.88%** of total carts.
+- The average monthly share was **2.78%**, while the median was **2.80%**, indicating a balanced distribution with minimal month-to-month variation.
+- Trend analysis showed a slight overall **downward** trend across the full three-year period (**Slope = -0.004**). However, when each year was analyzed separately, **2023**, **2024**, and **2025** each exhibited a slight upward trend with slope values of **0.003**, **0.004**, and **0.001**, respectively.
+- Despite the difference in trend direction, all slope values are very close to zero, indicating that changes over time are minimal and overall cart creation volume remains stable.
+#### **Business Interpretation**
+The dataset demonstrates a consistent flow of cart creation throughout the observation period without significant fluctuations, seasonal spikes, or abrupt declines. This stability suggests that the synthetic dataset was generated with a relatively uniform distribution of cart activity over time.
+
+Although the overall trendline is marginally negative while each individual year shows a slight positive trend, the magnitude of all slope values is extremely small. Therefore, these trends should be interpreted as **minor directional changes rather than meaningful business growth or decline**.

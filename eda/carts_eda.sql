@@ -98,6 +98,22 @@ select
 from analytics_data.carts
 group by status;
 
+-- cart creation trend.
+select
+	extract(year from created_at) as "Year",
+	extract(month from created_at) as "Month Number",
+	to_char(created_at, 'Month') as "Month Name",
+	to_char(created_at, 'Mon-yyyy') as "Date",
+	count(*) as "Cart Count",
+	round(count(*) / sum(count(*)) over(), 4) as "Percentage"
+from analytics_data.carts
+group by "Year", "Month Number", "Month Name", "Date"
+order by "Year", "Month Number", "Month Name", "Date";
+
+
+
+
+
 
 
 
