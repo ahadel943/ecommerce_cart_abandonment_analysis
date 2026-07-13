@@ -72,6 +72,3 @@ from items_count_by_cart;
 
 
 
-
-
-
