@@ -15,17 +15,21 @@ where c.cart_id is null; -- eveery cart in the checkout_attempts exists ib the c
 -- حayment ةethod distribution
 select 
 	payment_method as "Payment Method",
-	count(*) as "Attempts Count"
+	count(*) as "Attempts Count",
+	round(count(*) / sum(count(*)) over(), 4)
 from analytics_data.checkout_attempts
 group by payment_method
 order by "Attempts Count" desc;
 
+-- completion status distribution
+select
+	completed as "Completion Status",
+	count(*) as "Attempts Count",
+	round(count(*) / sum(count(*)) over(), 4) as "Percentage"
+from analytics_data.checkout_attempts
+group by completed; -- false	151939 - true	64857
 
-
-
-
-
-
+select count(*) from analytics_data.orders; -- 64857 orders, every completed checkout has one order
 
 
 

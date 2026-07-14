@@ -473,3 +473,15 @@ Since every product has been added to at least one cart, no catalog items are ex
 - The difference between the highest and lowest proportions is only **0.31%**, indicating a highly balanced distribution with no dominant payment method.
 #### **Business Interpretation**
 The balanced distribution of payment methods suggests that customers do not exhibit a strong preference for a single payment option at the checkout stage. This provides a representative foundation for subsequent analyses comparing checkout completion and cart abandonment behavior across different payment methods.
+### **Completion Status Distribution**
+![completion_status_distribution](./charts/20.completion_status_distribution.png)
+#### **Key Findings**
+- **Completed** checkouts account for **64,857** attempts (**29.92%**), while **151,939** attempts (**70.08%**) were **Not Completed**.
+- Uncompleted checkout attempts occur approximately **2.3** times more frequently than completed checkouts.
+- The distribution indicates that most checkout attempts do not progress to successful completion.
+#### **Business Interpretation**
+The high proportion of uncompleted checkout attempts highlights the checkout stage as a critical point in the customer journey that warrants further investigation.
+
+Checkout completion status will serve as a key variable in subsequent cart abandonment analyses to identify factors associated with successful purchases and incomplete transactions.
+
+Given that the number of completed checkout attempts matches the total number of orders in the dataset, there appears to be a one-to-one relationship between completed checkouts and successfully placed orders, which will be further validated during downstream analyses.
