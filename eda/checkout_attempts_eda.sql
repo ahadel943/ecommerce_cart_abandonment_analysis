@@ -31,6 +31,37 @@ group by completed; -- false	151939 - true	64857
 
 select count(*) from analytics_data.orders; -- 64857 orders, every completed checkout has one order
 
+-- shipping cost distribution analysis
+select
+	d."Minimum",
+	d."Q1",
+	d."Median",
+	d."Q3",
+	d."Maximum",
+	d."Average",
+	d."Standard Deviation",
+	d."Q3" - d."Q1" as "IQR",
+	d."Q1" - (1.5 * (d."Q3" - d."Q1")) as "Lower Bound",
+	d."Q3" + (1.5 * (d."Q3" - d."Q1")) as "Upper Bound"
+from (
+	select
+		min(shipping_cost) as "Minimum",
+		percentile_cont(0.25) within group (order by shipping_cost) as "Q1",
+		percentile_cont(0.5) within group (order by shipping_cost) as "Median",
+		percentile_cont(0.75) within group (order by shipping_cost) as "Q3",
+		max(shipping_cost) as "Maximum",
+		round(avg(shipping_cost), 2) as "Average",
+		round(stddev(shipping_cost), 2) as "Standard Deviation"
+	from analytics_data.checkout_attempts
+) as d;
+
+
+
+
+
+
+
+
 
 
 

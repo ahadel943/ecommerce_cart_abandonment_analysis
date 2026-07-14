@@ -485,3 +485,39 @@ The high proportion of uncompleted checkout attempts highlights the checkout sta
 Checkout completion status will serve as a key variable in subsequent cart abandonment analyses to identify factors associated with successful purchases and incomplete transactions.
 
 Given that the number of completed checkout attempts matches the total number of orders in the dataset, there appears to be a one-to-one relationship between completed checkouts and successfully placed orders, which will be further validated during downstream analyses.
+### **Shipping Cost Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Minimum        | 2          |
+| Q1             | 7.78       |
+| Median         | 13.55      |
+| Average        | 13.53      |
+| Q3             | 19.28      |
+| Maximum        | 25         |
+| Standard Deviation | 6.64   |
+| IQR            | 11.5       |
+| Upper Bound    | 36.53      |
+| Lower Bound    | -9.47      |
+#### **Key Findings**
+- Shipping costs range from **2.00** to **25.00** across all checkout attempts.
+- The average shipping cost (**13.53**) is nearly identical to the median (**13.55**), suggesting a highly balanced distribution with no noticeable skewness.
+- Half of all shipping costs fall between **7.78** and **19.28**, indicating that most checkout attempts incur moderate shipping fees.
+- No **positive** or **negative** outliers were identified based on the IQR method, suggesting that shipping costs are consistently distributed across the dataset.
+- The standard deviation of **6.64** indicates moderate variation in shipping costs without extreme values.
+#### **Business Interpretation**
+The absence of outliers and the balanced distribution of shipping costs suggest that shipping fees are applied consistently across checkout attempts.
+
+Since most shipping costs are concentrated within a relatively narrow range, shipping fees are unlikely to be driven by a small number of unusually high-cost transactions.
+
+Shipping cost will be examined in subsequent analyses to determine whether different shipping fee levels are associated with variations in checkout completion and cart abandonment behavior.
+
+
+
+
+
+
+
+
+
+
+
