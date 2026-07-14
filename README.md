@@ -465,7 +465,11 @@ Customers generally create shopping carts containing a small number of products,
 - All **5,000 products (100%)** appear at least once in customer shopping carts, indicating complete product coverage across the analysis period.
 #### **Business Interpretation**
 Since every product has been added to at least one cart, no catalog items are excluded from downstream cart abandonment analyses, allowing subsequent product-level insights to be generated from the complete product catalog.
-
-
-
-
+### **Payment Method Distribution**
+![payment_method_distribution](./charts//19.payment_method_distribution.png)
+#### **Key Findings**
+- Checkout attempts are almost equally distributed across the three available payment methods.
+- **Cash** is the most frequently used payment method, accounting for **33.52%** of all checkout attempts, followed by **Card** (**33.27%**) and **Wallet** (**33.21%**).
+- The difference between the highest and lowest proportions is only **0.31%**, indicating a highly balanced distribution with no dominant payment method.
+#### **Business Interpretation**
+The balanced distribution of payment methods suggests that customers do not exhibit a strong preference for a single payment option at the checkout stage. This provides a representative foundation for subsequent analyses comparing checkout completion and cart abandonment behavior across different payment methods.
