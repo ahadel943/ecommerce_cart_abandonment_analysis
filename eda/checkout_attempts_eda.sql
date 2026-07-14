@@ -55,7 +55,32 @@ from (
 	from analytics_data.checkout_attempts
 ) as d;
 
-
+-- shipping cost by cost group
+with shipping_cost_groups as (
+	select
+		case 
+			when shipping_cost < 10 then 'Under 10'
+			when shipping_cost < 15 then '10 - 14'
+			when shipping_cost < 20 then '15 - 19'
+			else '20+'
+		end as shipping_cost_group
+	from analytics_data.checkout_attempts
+)
+select 
+	shipping_cost_group as "Shipping Cost Group",
+	count(*) as "Attempts Count",
+	sum(count(*)) over() as "Total Count",
+	round(count(*) / sum(count(*)) over(), 4) as "Percentage"
+from shipping_cost_groups
+group by shipping_cost_group
+order by 
+	case
+		when shipping_cost_group = 'Under 10' then 1
+		when shipping_cost_group = '10 - 14' then 2
+		when shipping_cost_group = '15 - 19' then 3
+		else 4
+	end
+	
 
 
 

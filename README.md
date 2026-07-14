@@ -510,12 +510,19 @@ The absence of outliers and the balanced distribution of shipping costs suggest 
 Since most shipping costs are concentrated within a relatively narrow range, shipping fees are unlikely to be driven by a small number of unusually high-cost transactions.
 
 Shipping cost will be examined in subsequent analyses to determine whether different shipping fee levels are associated with variations in checkout completion and cart abandonment behavior.
+### **Shipping Cost by Shipping Cost Group**
+![shipping_cost_by_cost_group](./charts/21.shipping_cost_by_cost_group.png)
+#### **Key Findings**
+- Shipping costs are relatively well distributed across all checkout attempts, with no single cost group overwhelmingly dominating the dataset.
+- The largest segment is `Under 10`, accounting for **74,982** checkout attempts (**34.59%**).
+- The remaining checkout attempts are distributed almost equally across the other three groups: **10 - 14 (21.64%)**, **15 - 19 (21.92%)**, and **20+ (21.86%)**.
+- Approximately **two-thirds** of checkout attempts (**65.41%**) incur shipping costs of **10 or higher**, indicating that moderate shipping fees are common throughout the dataset.
+#### **Business Interpretation**
+The relatively balanced distribution of shipping cost groups provides a suitable foundation for evaluating whether shipping fees influence checkout completion and cart abandonment behavior.
 
+Since shipping costs are not heavily concentrated within a single price range, subsequent analyses can more reliably compare customer behavior across different shipping fee levels.
 
-
-
-
-
+Shipping cost groups will be leveraged in downstream analyses to determine whether higher shipping fees are associated with lower checkout completion rates or increased cart abandonment.
 
 
 
