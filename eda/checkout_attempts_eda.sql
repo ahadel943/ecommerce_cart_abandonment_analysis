@@ -81,7 +81,18 @@ order by
 		else 4
 	end
 	
-
+-- started_at trend analysis
+select
+	extract(year from started_at) as "Year",
+	extract(month from started_at) as "Month Number",
+	to_char(started_at, 'Mon') as "Month Short",
+	to_char(started_at, 'Month') as "Month name",
+	to_char(started_at, 'Mon-yyyy') as "Date",
+	count(*) as "Attempts Count",
+	sum(count(*)) over() as "Total Count",
+	round(count(*) / sum(count(*)) over(), 4) as "Percentage"
+from analytics_data.checkout_attempts
+group by "Year", "Month Number", "Month Short", "Month name", "Date";
 
 
 

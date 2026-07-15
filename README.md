@@ -523,8 +523,17 @@ The relatively balanced distribution of shipping cost groups provides a suitable
 Since shipping costs are not heavily concentrated within a single price range, subsequent analyses can more reliably compare customer behavior across different shipping fee levels.
 
 Shipping cost groups will be leveraged in downstream analyses to determine whether higher shipping fees are associated with lower checkout completion rates or increased cart abandonment.
+### **Checkout Attempt Trend Analysis**
+![checkout_attempt_trend_analysis](./charts/22.checkout_attempt_trend_analysis.png)
+#### **Key Findings**
+- Checkout attempts are consistently distributed across the 36-month period, with monthly contributions ranging from **2.57%** to **2.88%** of all checkout attempts.
+- The average monthly contribution is approximately **2.78%**, indicating a highly stable temporal distribution with only minor month-to-month fluctuations.
+- No significant spikes or sudden declines were observed throughout the dataset period.
+- The overall trend remains relatively stable over time, with only negligible variations that do not suggest a meaningful upward or downward movement in checkout activity.
+- The highest monthly contribution was recorded in **July 2024** (**2.88%**), while the lowest occurred in **February 2023** (**2.57%**). However, the difference between them is relatively small (**0.31 percentage points**).
+#### **Business Interpretation**
+The stability of checkout attempts over time suggests that the dataset was generated with a consistent level of customer checkout activity across the three-year period.
 
+The absence of substantial temporal fluctuations reduces the likelihood that subsequent analyses will be disproportionately influenced by a particular month or time period.
 
-
-
-
+Since checkout attempts exhibit a balanced time distribution, downstream analyses of checkout completion and cart abandonment can be conducted without introducing significant temporal bias.
