@@ -537,3 +537,42 @@ The stability of checkout attempts over time suggests that the dataset was gener
 The absence of substantial temporal fluctuations reduces the likelihood that subsequent analyses will be disproportionately influenced by a particular month or time period.
 
 Since checkout attempts exhibit a balanced time distribution, downstream analyses of checkout completion and cart abandonment can be conducted without introducing significant temporal bias.
+### **Total Amount Distribution Analysis**
+| Metric         | Value      |
+| -------------- | -----------|
+| Count          | 64,857     |
+| Minimum        | 20.04      |
+| Q1             | 512.35     |
+| Median         | 1008.9     |
+| Average        | 1008.69    |
+| Q3             | 1505.2     |
+| Maximum        | 1999.98    |
+| Standard Deviation | 572.81 |
+| IQR            | 992.85     |
+| Upper Bound    | 2994.47    |
+| Lower Bound    | -976.93    |
+#### **Key Findings**
+- Order values range from **20.04** to **1,999.98** across all completed purchases.
+- The average order value (**1,008.69**) is nearly identical to the median (**1,008.90**), indicating a well-balanced and relatively symmetric distribution of order values.
+- Half of all orders fall between **512.35** and **1,505.20**, suggesting moderate variability in purchase amounts across customers.
+- No positive or negative outliers were identified using the IQR method, indicating the absence of unusually large or exceptionally small order values within the dataset.
+- The quartile distribution demonstrates that order values are relatively evenly spread around the median, further supporting the stability of the distribution.
+#### **Business Interpretation**
+The balanced distribution of order values suggests that revenue generation is not disproportionately driven by a small number of exceptionally large purchases. Instead, customer spending appears to be distributed across a broad range of order values.
+
+The absence of extreme outliers indicates that purchasing behavior remains relatively consistent throughout the dataset, reducing the risk of aggregate metrics being heavily influenced by a small subset of transactions.
+
+Since order values are spread across low, medium, and high purchase amounts, subsequent analyses can segment orders by value to investigate potential relationships with payment methods, checkout completion patterns, and cart abandonment behavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
