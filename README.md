@@ -591,9 +591,33 @@ The balanced distribution of event types indicates that the dataset was designed
 Since carts can generate multiple occurrences of the same event, analyses involving user journeys or conversion paths should account for repeated interactions rather than assuming a one-to-one relationship between carts and events.
 
 Consequently, event counts should be interpreted as measures of user interaction frequency rather than the number of unique carts progressing through each stage of the shopping journey.
+### **Event Frequency per Cart**
+| Metric         | Value      |
+| -------------- | -----------|
+| Minimum        | 3          |
+| Q1             | 6          |
+| Median         | 9          |
+| Average        | 9.01       |
+| Q3             | 12         |
+| Maximum        | 15         |
+| Standard Deviation | 3.74   |
+| IQR            | 6          |
+| Upper Bound    | 21         |
+| Lower Bound    | -3         |
+#### **Key Findings**
+- The typical cart generates 9 events, with the **mean (9.01)** and **median (9)** being nearly identical, indicating an exceptionally balanced distribution.
+- Half of all carts generate between **6** and **12** events (between Q1 and Q3).
+- Event frequencies range from **3** to **15** events per cart, suggesting moderate variation in cart-level interactions.
+- No positive or negative outliers were identified using the IQR method, as all observed values fall within the calculated bounds.
+- The relatively low standard deviation (**3.74**), together with the close agreement between the mean and median, indicates highly consistent event generation patterns across carts.
+#### **Business Interpretation**
+Most carts exhibit similar levels of interaction throughout the shopping journey, with no small subset of carts disproportionately contributing to overall event activity.
 
+The balanced distribution suggests that cart-level behaviors are well represented across the dataset, making aggregate event metrics reliable for subsequent analyses.
 
+Since carts typically generate multiple events rather than a single interaction, user behavior should be interpreted as a sequence of actions occurring throughout the shopping process rather than isolated events.
 
+The absence of extreme values indicates that the dataset captures consistent shopping behaviors without being heavily influenced by unusually active or inactive carts.
 
 
 

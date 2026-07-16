@@ -78,10 +78,36 @@ from analytics_data.cart_events
 where event_name = 'cart_abandoned'; -- the checkout_started happened in 254,812 carts, with 463,599 total events
 
 
-
-
-
-
+-- event frequency per cart
+with cart_stats as (
+	select
+		min(d."Events Count") as "Minimum",
+		percentile_cont(0.25) within group (order by d."Events Count") as "Q1",
+		percentile_cont(0.5) within group (order by d."Events Count") as "Median",
+		round(avg(d."Events Count"), 2) as "Average",
+		percentile_cont(0.75) within group (order by d."Events Count") as "Q3",
+		round(stddev(d."Events Count"), 2) as "Std Dev",
+		max(d."Events Count") as "Maximum"
+	from (
+		select 
+			cart_id as "Cart ID",
+			count(*) as "Events Count"
+		from analytics_data.cart_events
+		group by cart_id
+	) as d
+)
+select 
+	cs."Minimum",
+	cs."Q1",
+	cs."Median",
+	cs."Q3",
+	cs."Average",
+	cs."Std Dev",
+	cs."Maximum",
+	cs."Q3" - cs."Q1" as "IQR",
+	cs."Q1" - (1.5 * (cs."Q3" - cs."Q1")) as "Lower Bounds",
+	cs."Q3" + (1.5 * (cs."Q3" - cs."Q1")) as "Upper Bounds"
+from cart_stats as cs;
 
 
 
