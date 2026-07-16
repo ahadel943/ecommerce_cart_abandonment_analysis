@@ -83,7 +83,12 @@ order by
 		else 7
 	end;
 
-
+-- payment method distribution
+select
+	payment_method,
+	sum(total_amount) as "Revenue" 
+from analytics_data.orders
+group by payment_method;
 
 
 

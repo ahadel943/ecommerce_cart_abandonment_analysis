@@ -1,0 +1,19 @@
+-- cart_events table eda
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

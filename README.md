@@ -579,6 +579,25 @@ Lower-value orders contribute meaningfully to order volume but have a relatively
 The balanced distribution of order counts across the mid-value segments suggests stable purchasing behavior across a broad range of transaction values.
 
 From a business perspective, maintaining customer acquisition across all order segments while preserving and growing the high-value segment could have the greatest impact on revenue performance.
+### **Events Distribution Analysis**
+#### **Key Findings**
+- Event frequencies are highly balanced across all event types, ranging from **14.26%** to **14.33%** of total recorded events.
+- No single event type dominates user interactions, indicating a uniformly distributed synthetic event generation process.
+- The number of event occurrences consistently exceeds the number of distinct carts for each event type, suggesting that a single cart may generate the same event multiple times.
+- The `cart_events` table captures event-level interactions rather than unique cart-level transitions.
+#### **Business Interpretation**
+The balanced distribution of event types indicates that the dataset was designed to represent a broad range of cart-related behaviors without overrepresenting any particular interaction.
+
+Since carts can generate multiple occurrences of the same event, analyses involving user journeys or conversion paths should account for repeated interactions rather than assuming a one-to-one relationship between carts and events.
+
+Consequently, event counts should be interpreted as measures of user interaction frequency rather than the number of unique carts progressing through each stage of the shopping journey.
+
+
+
+
+
+
+
 
 
 
