@@ -618,11 +618,21 @@ The balanced distribution suggests that cart-level behaviors are well represente
 Since carts typically generate multiple events rather than a single interaction, user behavior should be interpreted as a sequence of actions occurring throughout the shopping process rather than isolated events.
 
 The absence of extreme values indicates that the dataset captures consistent shopping behaviors without being heavily influenced by unusually active or inactive carts.
+### **Events Trend Analysis**
+![events_trend_analysis](./charts/24.events_trend_analysis.png)
+#### **Key Findings**
+- Monthly event volumes remain highly stable throughout the three-year period, typically ranging between approximately **88 thousand and 93 thousand** events.
+- A recurring seasonal pattern is observed in **February** across all three years, where event volumes experience a noticeable decline followed by a recovery in **March**.
+- Trend analysis indicates a **negligible positive trend** over time, with extremely small slope values and weak correlations across both the overall period and individual years.
+- Event activity exhibits limited **month-to-month** variability, suggesting a consistent synthetic event generation process throughout the dataset.
+#### **Business Interpretation**
+The stability of monthly event volumes indicates that user interactions are consistently represented throughout the observation period without significant fluctuations.
 
+The recurring February decline followed by March recovery suggests the presence of a seasonal component in the synthetic data generation process.
 
+Given the weak correlations observed in the trend analysis, changes in event volumes over time are better characterized as seasonal fluctuations rather than meaningful long-term growth or decline.
 
-
-
+The consistent distribution of event activity across months provides a reliable foundation for downstream cart abandonment analyses without requiring adjustments for major temporal imbalances.
 
 
 

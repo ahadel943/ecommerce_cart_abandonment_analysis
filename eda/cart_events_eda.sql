@@ -109,5 +109,62 @@ select
 	cs."Q3" + (1.5 * (cs."Q3" - cs."Q1")) as "Upper Bounds"
 from cart_stats as cs;
 
+-- event_time temporal analysis
+-- time check
+select  min(event_time), max(event_time)
+from analytics_data.cart_events; -- min: 2023-01-01 00:00:50.000 | max: 2025-12-30 23:59:50.000
+
+select 
+	extract(year from event_time) as "Year",
+	extract(month from event_time) as "Month Number",
+	to_char(event_time, 'Month') as "Month Name",
+	to_char(event_time, 'Mon') as "Month Short",
+	to_char(event_time, 'Mon-yyyy') as "Date",
+	count(*) as "Events Count",
+	row_number() over() as "Sequemce"
+from analytics_data.cart_events
+group by "Year", "Month Number", "Month Name", "Month Short", "Date"
+order by "Year", "Month Number", "Month Name", "Month Short", "Date";
+
+-- trend calc
+with events_timeline as (
+	select 
+		extract(year from event_time) as "Year",
+		extract(month from event_time) as "Month Number",
+		to_char(event_time, 'Month') as "Month Name",
+		to_char(event_time, 'Mon') as "Month Short",
+		to_char(event_time, 'Mon-yyyy') as "Date",
+		count(*) as "Events Count",
+		row_number() over() as "Sequemce"
+	from analytics_data.cart_events
+	group by "Year", "Month Number", "Month Name", "Month Short", "Date"
+	order by "Year", "Month Number", "Month Name", "Month Short", "Date"
+)
+select 
+	regr_slope(et."Sequemce", et."Events Count") as "Slope",
+	corr(et."Sequemce", et."Events Count") as "Correlation"
+from events_timeline as et
+where et."Sequemce" between 25 and 36;
+
+/*
+ * overall trend 0.0001490584092866, corr 0.03421624133977234
+ * 2023 trend 0.0003509844449346, corr 0.2580458096000146
+ * 2024 trend 0.0003251661028123, corr 0.19097951944362299
+ * 2025 trend 0.0001488993805316, corr 0.10914426723255012
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
