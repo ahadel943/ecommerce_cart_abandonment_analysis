@@ -633,10 +633,18 @@ The recurring February decline followed by March recovery suggests the presence 
 Given the weak correlations observed in the trend analysis, changes in event volumes over time are better characterized as seasonal fluctuations rather than meaningful long-term growth or decline.
 
 The consistent distribution of event activity across months provides a reliable foundation for downstream cart abandonment analyses without requiring adjustments for major temporal imbalances.
+### **Carts Distribution by Abandonment Reason**
+![carts_distribution_by_abandonment_reason](./charts/25.carts_distribution_by_abandonment_reason.png)
+#### **Key Findings**
+- The `abandonment_reasons` table contains **144,232** records representing **144,232** distinct carts, indicating that each abandoned cart is associated with exactly **one** abandonment reason.
+- Five abandonment reasons are represented in the dataset: `Payment Issues`, `Price Too High`, `High Shipping Cost`, `Coupon Failed`, and `Just Browsing`.
+- The distribution of abandonment reasons is highly balanced, with each reason accounting for approximately **20%** of all abandoned carts.
+- No single abandonment reason dominates the dataset, suggesting that cart abandonment behavior is evenly distributed across the available categories.
+#### **Business Interpretation**
+The balanced distribution indicates that the synthetic dataset was intentionally designed to represent multiple cart abandonment scenarios without disproportionately emphasizing any particular reason.
 
+Since no abandonment reason significantly outweighs the others, downstream analyses should consider all reasons as equally important contributors to cart abandonment behavior.
 
-
-
-
+The one-to-one relationship between carts and abandonment reasons simplifies cart-level analyses by ensuring that each abandoned cart can be attributed to a single primary cause.
 
 
