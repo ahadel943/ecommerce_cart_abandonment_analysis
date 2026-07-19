@@ -724,11 +724,12 @@ Consequently, reducing cart abandonment represents the primary business opportun
 - **Cart Abandonment Rates** are remarkably consistent across all acquisition channels (ranging from **81.76%** to **82.56%**), indicating minimal variation in abandonment behavior among customer acquisition segments.
 #### **Business Interpretation**
 **Acquisition channels** do not appear to be a significant driver of cart abandonment in this dataset, suggesting that optimization efforts should focus on other business dimensions that may have a greater impact on checkout completion.
-
-
-
-
-
+#### **2.3 - CAR by Premium Status**
+![car_by_premium_status](./charts/28.car_by_premium_status.png)
+#### **Key Insights**
+- **Premium** and **Non-Premium** customers exhibit nearly identical Cart Abandonment Rates (**~82%**), indicating no meaningful difference in abandonment behavior between the two customer groups.
+#### **Business Interpretation**
+**Premium status** does not appear to significantly influence cart abandonment in this dataset, suggesting that factors beyond customer membership status are more likely to explain the high abandonment rate.
 
 
 
