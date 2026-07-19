@@ -693,7 +693,23 @@ Since confidence values exhibit limited variability and contain no extreme obser
 
 ## **Analysis**
 ### **1. What is the overall CAR ?**
+| Metric                      | Value      |
+| --------------------------- | -----------|
+| Eligible Carts Count        | 361,028    |
+| Completed Carts Count       | 64,857     |
+| Abandoned Carts Count       | 296,171    |
+| **Cart Completion Rate (CCR)**  | **17,96%**     |
+| **Cart Abandonment Rate (CAR)** | **82,04%**     |
+#### **Key Insights**
+- All **361,028** carts satisfy the business definition of an **Eligible Cart** (i.e., `contain at least one item`), indicating that the dataset contains no empty carts.
+- The Cart Completion Rate (**CCR**) is **17.96%**, while the Cart Abandonment Rate (**CAR**) reaches **82.04%**.
+- More than four out of every five eligible carts do not result in a completed purchase.
+#### **Business Interpretation**
+The high Cart Abandonment Rate highlights a substantial gap between purchase intent and completed transactions. Although customers actively add products to their carts, only a relatively small proportion proceed to complete their orders.
 
+At this stage, the analysis confirms the existence of significant purchase drop-off behavior but does not explain its causes. The subsequent analyses will investigate whether factors such as customer characteristics, cart value, cart size, shipping costs, payment methods, and abandonment reasons are associated with higher abandonment rates.
+
+Consequently, reducing cart abandonment represents the primary business opportunity identified in this dataset, as even modest improvements in cart completion could translate into meaningful increases in completed orders and revenue.
 
 
 
