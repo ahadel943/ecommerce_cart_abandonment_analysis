@@ -660,15 +660,17 @@ The one-to-one relationship between carts and abandonment reasons simplifies car
 | Upper Bound    | 1.185      |
 | Lower Bound    | 0.265      |
 #### **Key Findings**
-- The dataset follows a flawless, bell-shaped normal distribution. This is mathematically proven by the exact alignment of the **Mean** and the **Median** at **0.72**.
-- Statistical boundary analysis confirms that the dataset is completely free of anomalies. The actual **minimum** value (**0.5**) stays safely above the Lower Bound (**0.265**), and the **maximum** value (**0.95**) remains well within the Upper Bound (**1.185**).
-- A manual sanity check reveals that **~65%** of the user base is densely clustered within the Interquartile Range (IQR) between **Q1 (0.61)** and **Q3 (0.84)**, showing sharp drops in volume only at the absolute extremes (Min and Max).
+- Confidence scores range from **0.50** to **0.95**, indicating moderate to high confidence levels across all abandonment reasons.
+- The **mean (0.72)** and **median (0.72)** are identical, suggesting a highly balanced distribution with no meaningful skewness.
+- **50%** of all confidence scores fall between **0.61** and **0.84**.
+- No positive or negative outliers were identified based on the IQR method.
+- The relatively small standard deviation (**0.13**) indicates limited variability in confidence levels across the dataset.
 #### **Business Interpretation**
-The absence of extreme outliers indicates that the abandonment reasons provided by users are highly consistent and reliable. There are no erratic or isolated complaints skewing the overall metrics.
+Abandonment reasons are consistently assigned with moderate to high confidence levels, supporting their reliability for downstream cart abandonment analyses.
 
-With a tight Standard Deviation of 0.13, the vast majority of users report a "Moderate-to-High" confidence score (centered around 0.72). This proves that the captured reasons for cart abandonment are not random guesses but represent solid, well-defined user friction points.
+The balanced distribution of confidence scores suggests that no small subset of records disproportionately influences aggregate confidence metrics.
 
-Since the distribution is stable and statistically sound, any business decision or product optimization targeted at these abandonment reasons will directly and predictably impact the core **65%** of the user base, ensuring a high ROI on product fixes.
+Since confidence values exhibit limited variability and contain no extreme observations, they provide a stable measure for evaluating abandonment patterns across different cart segments.
 
 
 
