@@ -711,6 +711,25 @@ At this stage, the analysis confirms the existence of significant purchase drop-
 
 Consequently, reducing cart abandonment represents the primary business opportunity identified in this dataset, as even modest improvements in cart completion could translate into meaningful increases in completed orders and revenue.
 
+**2. Which customer segments exhibit the highest abandonment rates ?**
+#### **2.1 - CAR by Customer Type**
+![car_by_customer_type](./charts/26.car_by_customer_type.png)
+#### **Key Insights**
+- **New** and **returning** customers exhibit nearly identical Cart Abandonment Rates (**~82%**), indicating no meaningful difference in abandonment behavior between the two customer segments.
+#### **Business Interpretation**
+-**Customer type** does not appear to be a significant driver of cart abandonment in this dataset, suggesting that improvement efforts should be directed toward other business dimensions.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
