@@ -717,13 +717,13 @@ Consequently, reducing cart abandonment represents the primary business opportun
 #### **Key Insights**
 - **New** and **returning** customers exhibit nearly identical Cart Abandonment Rates (**~82%**), indicating no meaningful difference in abandonment behavior between the two customer segments.
 #### **Business Interpretation**
--**Customer type** does not appear to be a significant driver of cart abandonment in this dataset, suggesting that improvement efforts should be directed toward other business dimensions.
-
-
-
-
-
-
+**Customer type** does not appear to be a significant driver of cart abandonment in this dataset, suggesting that improvement efforts should be directed toward other business dimensions.
+#### **2.2 - CAR by Acquisition Channel**
+![car_by_acquisition_channel](./charts/27.car_by_acquisition_channel.png)
+#### **Key Insights**
+- **Cart Abandonment Rates** are remarkably consistent across all acquisition channels (ranging from **81.76%** to **82.56%**), indicating minimal variation in abandonment behavior among customer acquisition segments.
+#### **Business Interpretation**
+**Acquisition channels** do not appear to be a significant driver of cart abandonment in this dataset, suggesting that optimization efforts should focus on other business dimensions that may have a greater impact on checkout completion.
 
 
 
