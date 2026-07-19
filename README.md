@@ -672,9 +672,10 @@ The balanced distribution of confidence scores suggests that no small subset of 
 
 Since confidence values exhibit limited variability and contain no extreme observations, they provide a stable measure for evaluating abandonment patterns across different cart segments.
 
-
-
-
+## **Analysis Unit**
+**The unit of analysis for this project is the shopping cart (`cart_id`). Each cart represents a customer's purchasing intent and serves as the central entity linking user interactions, cart contents, checkout behavior, completed orders, and abandonment outcomes.
+All analyses were performed at the cart level to ensure metric consistency across the different stages of the cart lifecycle. Tables such as `cart_items`, `cart_events`, `checkout_attempts`, `orders`, and `abandonment_reasons` were aggregated or joined using `cart_id`, allowing each cart to be tracked from creation through either successful purchase or abandonment.
+Consequently, business metrics including cart abandonment rates, checkout completion rates, order conversions, and abandonment patterns are defined and interpreted at the cart level throughout the project.**
 
 
 
