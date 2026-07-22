@@ -742,12 +742,12 @@ Age group does not appear to be a meaningful driver of cart abandonment in this 
 - Cart Abandonment Rates remain consistently close across countries and cities, with only minor variations around the overall average, indicating no meaningful geographic differences in abandonment behavior.
 #### **Business Interpretation**
 Geographic location does not appear to be a significant driver of cart abandonment in this dataset, suggesting that optimization efforts should prioritize operational or checkout-related factors rather than regional differences.
-
-
-
-
-
-
+#### **2.6 - CAR by Device**
+![car_by_device](./charts/31.car_by_device.png)
+#### **Key Insights**
+- Cart Abandonment Rates are highly consistent across device types (**81.92%–82.40%**), indicating minimal variation in abandonment behavior between mobile, desktop, and tablet users.
+#### **Business Interpretation**
+Device type does not appear to significantly influence cart abandonment in this dataset, suggesting that the checkout experience performs similarly across all supported devices.
 
 
 
