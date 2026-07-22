@@ -730,7 +730,7 @@ Consequently, reducing cart abandonment represents the primary business opportun
 - **Premium** and **Non-Premium** customers exhibit nearly identical Cart Abandonment Rates (**~82%**), indicating no meaningful difference in abandonment behavior between the two customer groups.
 #### **Business Interpretation**
 **Premium status** does not appear to significantly influence cart abandonment in this dataset, suggesting that factors beyond customer membership status are more likely to explain the high abandonment rate.
-#### **2.3 - CAR by Age Group**
+#### **2.4 - CAR by Age Group**
 ![car_by_age_group](./charts/29.car_by_age_group.png)
 #### **Key Insights**
 - Cart Abandonment Rates remain consistently close across all age groups (**81.78%–82.18%**), indicating that customer age has minimal influence on abandonment behavior.
