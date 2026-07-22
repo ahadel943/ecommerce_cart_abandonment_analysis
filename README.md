@@ -736,6 +736,37 @@ Consequently, reducing cart abandonment represents the primary business opportun
 - Cart Abandonment Rates remain consistently close across all age groups (**81.78%–82.18%**), indicating that customer age has minimal influence on abandonment behavior.
 #### **Business Interpretation**
 Age group does not appear to be a meaningful driver of cart abandonment in this dataset, suggesting that the high abandonment rate is likely influenced by factors other than customer demographics.
+#### **2.5 - CAR by Country**
+![car_by_country](./charts/30.car_by_country.png)
+#### **Key Insights**
+- Cart Abandonment Rates remain consistently close across countries and cities, with only minor variations around the overall average, indicating no meaningful geographic differences in abandonment behavior.
+#### **Business Interpretation**
+Geographic location does not appear to be a significant driver of cart abandonment in this dataset, suggesting that optimization efforts should prioritize operational or checkout-related factors rather than regional differences.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
