@@ -754,10 +754,12 @@ Device type does not appear to significantly influence cart abandonment in this 
 - Cart Abandonment Rates remain remarkably consistent across all cart value groups (**~82%**), indicating that cart value has minimal influence on abandonment behavior in this dataset.
 #### **Business Interpretation**
 Higher-value carts are not significantly more or less likely to be abandoned than lower-value carts, suggesting that cart abandonment is driven by factors other than cart value alone.
-
-
-
-
+### **4. Does cart size influence abandonment behavior ?**
+![car_by_cart_size](./charts/33.car_by_cart_size.png)
+#### **Key Insights**
+- Cart Abandonment Rates remain highly consistent across all cart size groups (**81.80%–82.17%**), indicating that the number of items in a cart has minimal influence on abandonment behavior.
+#### **Business Interpretation**
+Cart size does not appear to be a significant driver of cart abandonment in this dataset, suggesting that customers are equally likely to abandon carts regardless of the number of items they contain.
 
 
 

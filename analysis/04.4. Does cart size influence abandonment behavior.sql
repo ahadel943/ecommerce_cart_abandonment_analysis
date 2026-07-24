@@ -1,0 +1,24 @@
+-- 4. Does cart size influence abandonment behavior ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
