@@ -760,8 +760,11 @@ Higher-value carts are not significantly more or less likely to be abandoned tha
 - Cart Abandonment Rates remain highly consistent across all cart size groups (**81.80%–82.17%**), indicating that the number of items in a cart has minimal influence on abandonment behavior.
 #### **Business Interpretation**
 Cart size does not appear to be a significant driver of cart abandonment in this dataset, suggesting that customers are equally likely to abandon carts regardless of the number of items they contain.
+### **5. Does shipping cost affect abandonment rates ?**
+![]()
+#### **Key Insights**
 
-
+#### **Business Interpretation**
 
 
 
