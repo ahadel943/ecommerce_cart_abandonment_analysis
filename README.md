@@ -766,6 +766,12 @@ Cart size does not appear to be a significant driver of cart abandonment in this
 - Shipping cost itself does not appear to significantly influence cart abandonment, as Cart Abandonment Rates remain remarkably consistent across all shipping cost groups (**~70%**). However, **carts that never reached the checkout stage exhibit a 100% abandonment rate, highlighting checkout progression as a more influential factor than shipping cost alone**.
 #### **Business Interpretation**
 The findings suggest that reducing cart abandonment should prioritize understanding why customers fail to initiate the checkout process rather than focusing solely on shipping costs. Once customers reach checkout, shipping cost levels have minimal impact on completion behavior in this dataset.
+### **6. Which payment methods are associated with higher checkout completion rates ?**
+![ccr_by_payment_method](./charts/35.ccr_by_payment_method.png)
+#### **Key Insights**
+- Checkout completion rates are nearly identical across **Cash (29.78%)**, **Card (30.05%)**, and **Wallet (29.92%)**, suggesting that no payment method materially outperforms the others.
+#### **Business Interpretation**
+Payment method choice does not appear to be a significant driver of checkout completion, indicating that cart abandonment is likely influenced by factors earlier in the customer journey rather than the payment option itself.
 
 
 
