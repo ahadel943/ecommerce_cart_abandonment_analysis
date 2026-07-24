@@ -686,10 +686,9 @@ Since confidence values exhibit limited variability and contain no extreme obser
 - **4. Does cart size influence abandonment behavior ?**
 - **5. Does shipping cost affect abandonment rates ?**
 - **6. Which payment methods are associated with higher checkout completion rates ?**
-- **7. Which abandonment reasons are most common ?**
-- **8. Are specific abandonment reasons associated with particular cart characteristics ?**
-- **9. What factors are associated with high-value abandoned carts ?**
-- **10. Which business dimensions provide the greatest opportunities for reducing cart abandonment ?**
+- **7. Are specific abandonment reasons associated with particular cart characteristics ?**
+- **8. What factors are associated with high-value abandoned carts ?**
+- **9. Which business dimensions provide the greatest opportunities for reducing cart abandonment ?**
 
 ## **Analysis**
 ### **1. What is the overall CAR ?**
