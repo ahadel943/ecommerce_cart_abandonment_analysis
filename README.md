@@ -761,11 +761,11 @@ Higher-value carts are not significantly more or less likely to be abandoned tha
 #### **Business Interpretation**
 Cart size does not appear to be a significant driver of cart abandonment in this dataset, suggesting that customers are equally likely to abandon carts regardless of the number of items they contain.
 ### **5. Does shipping cost affect abandonment rates ?**
-![]()
+![car_by_shipping_cost](./charts/34.car_by_shipping_cost.png)
 #### **Key Insights**
-
+- Shipping cost itself does not appear to significantly influence cart abandonment, as Cart Abandonment Rates remain remarkably consistent across all shipping cost groups (**~70%**). However, **carts that never reached the checkout stage exhibit a 100% abandonment rate, highlighting checkout progression as a more influential factor than shipping cost alone**.
 #### **Business Interpretation**
-
+The findings suggest that reducing cart abandonment should prioritize understanding why customers fail to initiate the checkout process rather than focusing solely on shipping costs. Once customers reach checkout, shipping cost levels have minimal impact on completion behavior in this dataset.
 
 
 

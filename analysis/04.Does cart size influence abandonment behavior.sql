@@ -1,4 +1,4 @@
--- 3. Does cart value influence abandonment behavior ?
+-- 4. Does cart size influence abandonment behavior ?
 
 with items_count as (
 	select 
@@ -24,7 +24,7 @@ carts_status as (
 	left join has_order as ho
 	on c.cart_id = ho."Cart ID"
 ),
-amount_groups as (
+items_count_groups as (
 	select 
 		case 
 			when "Items Count" = 1 then '1 Item Cart'
@@ -43,7 +43,7 @@ summary as (
 		count(*) filter(where "Items Count" >= 1) as "Eligible Carts Count",
 		count(*) filter(where "Items Count" >= 1 and "Has Order" = 1) as "Completed Carts Count",
 		count(*) filter(where "Items Count" >= 1 and "Has Order" = 0) as "Abandoned Carts Count"
-	from amount_groups
+	from items_count_groups
 	group by "Items Count Group"
 )
 select
