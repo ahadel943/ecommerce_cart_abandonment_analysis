@@ -748,12 +748,12 @@ Geographic location does not appear to be a significant driver of cart abandonme
 - Cart Abandonment Rates are highly consistent across device types (**81.92%–82.40%**), indicating minimal variation in abandonment behavior between mobile, desktop, and tablet users.
 #### **Business Interpretation**
 Device type does not appear to significantly influence cart abandonment in this dataset, suggesting that the checkout experience performs similarly across all supported devices.
-
-
-
-
-
-
+### **3. Does cart value influence abandonment behavior ?**
+![car_by_cart_value](./charts/32.car_by_cart_value.png)
+#### **Key Insights**
+- Cart Abandonment Rates remain remarkably consistent across all cart value groups (**~82%**), indicating that cart value has minimal influence on abandonment behavior in this dataset.
+#### **Business Interpretation**
+Higher-value carts are not significantly more or less likely to be abandoned than lower-value carts, suggesting that cart abandonment is driven by factors other than cart value alone.
 
 
 
