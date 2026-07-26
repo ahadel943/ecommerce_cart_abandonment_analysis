@@ -771,12 +771,13 @@ The findings suggest that reducing cart abandonment should prioritize understand
 - Checkout completion rates are nearly identical across **Cash (29.78%)**, **Card (30.05%)**, and **Wallet (29.92%)**, suggesting that no payment method materially outperforms the others.
 #### **Business Interpretation**
 Payment method choice does not appear to be a significant driver of checkout completion, indicating that cart abandonment is likely influenced by factors earlier in the customer journey rather than the payment option itself.
-
-
-
-
-
-
+### **7. Are specific abandonment reasons associated with particular cart characteristics ?**
+#### **7.1 - Abandoned Carts Volume by Price Group & Reason**
+![abandoned_carts_volume by_price_group_reason](./charts/36.abandoned_carts%20_volume%20by_price_group_reason.png)
+#### **Key Insights**
+- The distribution of abandonment reasons remains highly consistent across all cart value groups, with no single reason disproportionately associated with either low-value or high-value carts.
+#### **Business Interpretation**
+Cart value alone does not appear to influence why customers abandon their carts, suggesting that abandonment drivers are relatively universal across different spending levels and should be addressed through broad checkout and customer experience improvements rather than value-specific interventions.
 
 
 
