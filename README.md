@@ -772,12 +772,34 @@ The findings suggest that reducing cart abandonment should prioritize understand
 #### **Business Interpretation**
 Payment method choice does not appear to be a significant driver of checkout completion, indicating that cart abandonment is likely influenced by factors earlier in the customer journey rather than the payment option itself.
 ### **7. Are specific abandonment reasons associated with particular cart characteristics ?**
-#### **7.1 - Abandoned Carts Volume by Price Group & Reason**
-![abandoned_carts_volume by_price_group_reason](./charts/36.abandoned_carts%20_volume%20by_price_group_reason.png)
+#### **7.1 - Abandoned Carts Volume by Cart Value Group & Reason**
+![abandoned_carts_volume_by_cart_value_group_reason](./charts/36.abandoned_carts_volume_by_cart_value_group_reason.png)
 #### **Key Insights**
 - The distribution of abandonment reasons remains highly consistent across all cart value groups, with no single reason disproportionately associated with either low-value or high-value carts.
 #### **Business Interpretation**
 Cart value alone does not appear to influence why customers abandon their carts, suggesting that abandonment drivers are relatively universal across different spending levels and should be addressed through broad checkout and customer experience improvements rather than value-specific interventions.
+#### **7.2 - Abandoned Carts Volume by Cart Size Group & Reason**
+![abandoned_carts_volume_by_cart_size_group_reason](./charts/37.abandoned_carts_volume_by_cart_size_group_reason.png)
+#### **Key Insights**
+- Abandonment reasons are distributed almost evenly across all cart size groups, indicating that the number of items in a cart has little to no influence on the specific reason for abandonment.
+#### **Business Interpretation**
+Customers appear to abandon their carts for similar reasons regardless of cart size, suggesting that reducing cart abandonment should focus on improving the overall checkout experience rather than targeting carts with a particular number of items.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

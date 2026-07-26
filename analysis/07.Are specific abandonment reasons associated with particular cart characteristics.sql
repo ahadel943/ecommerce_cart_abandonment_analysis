@@ -72,8 +72,63 @@ order by
 		else 7
 	end;
 
-
-
+-- 7.2 cart size by reason
+with items_count as (
+	select 
+		cart_id as "Cart ID",
+		count(*) as "Items Count"
+	from analytics_data.cart_items 
+	group by cart_id
+),
+has_order as (
+	select 
+		distinct cart_id as "Cart ID",
+		1 as "Has Order"
+	from analytics_data.orders
+),
+carts_status as (
+	select
+		c.cart_id as "Cart ID",
+		coalesce(ic."Items Count", 0) as "Items Count",
+		coalesce(ho."Has Order", 0) as "Has Order",
+		coalesce(ar.reason, 'Did not make to checkout') as "Reason"
+	from analytics_data.carts as c
+	left join items_count as ic
+	on c.cart_id = ic."Cart ID"
+	left join has_order as ho
+	on c.cart_id = ho."Cart ID"
+	left join analytics_data.abandonment_reasons as ar
+	on c.cart_id = ar.cart_id
+),
+amount_groups as (
+	select 
+		case
+			when "Items Count" = 1 then '1 Item Cart'
+			when "Items Count" = 2 then '2 Items Cart'
+			when "Items Count" = 3 then '3 Items Cart'
+			when "Items Count" = 4 then '4 Items Cart'
+			else '5 Items Cart'
+		end as "Items Count Group",
+		"Items Count",
+		"Has Order",
+		"Reason"
+	from carts_status
+)
+select
+	"Items Count Group",
+	"Reason",
+	count(*) as "Abandoned Carts Count"
+from amount_groups
+where "Reason" <> 'Did not make to checkout'
+group by "Items Count Group", "Reason"
+order by 
+	case
+		when "Items Count Group" = '1 Item Cart' then 1
+		when "Items Count Group" = '2 Items Cart' then 2
+		when "Items Count Group" = '3 Items Cart' then 3
+		when "Items Count Group" = '4 Items Cart' then 4
+		else 5
+	end;
 
 
 
