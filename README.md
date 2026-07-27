@@ -797,12 +797,12 @@ Geography does not appear to be a primary driver of abandonment among high-value
 - High-value carts (**1500+**) show remarkably similar abandonment rates across all device types, ranging from **81.83%** to **82.28%**, indicating that device preference has minimal influence on abandonment behavior within this segment.
 #### **Business Interpretation**
 Device type is unlikely to be a primary contributor to the high abandonment rate observed among high-value carts, suggesting that the underlying causes are more likely related to business or checkout-related factors rather than the shopping platform itself.
-
-
-
-
-
-
+#### **8.3 High Value Carts `CAR` Analysis by Acquisition Channel**
+![high_value_carts_car_by_acquisition_channel](./charts/40.high_value_carts_car_by_acquisition_channel.png)
+#### **Key Insights**
+- High-value carts (**1500+**) maintain consistently high abandonment rates across all acquisition channels (**~82%**), with only marginal differences between channels, indicating that customer acquisition source has little influence on abandonment behavior within this segment.
+#### **Business Interpretation**
+Acquisition channels do not appear to be a meaningful driver of high-value cart abandonment, suggesting that the largest leakage point is likely caused by factors occurring later in the customer journey rather than how customers were acquired.
 
 
 
