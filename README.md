@@ -822,11 +822,24 @@ The largest leakage among high-value carts is unlikely to be explained by custom
 - Among high-value carts that reached checkout, Cart Abandonment Rates remained consistently close across all shipping cost groups (**69.75%–70.82%**), suggesting that shipping cost is not a primary driver of abandonment for these users.
 #### **Business Interpretation**
 Reducing abandonment among high-value carts is more likely to come from improving the transition from Cart to Checkout rather than adjusting shipping fees, as the largest loss occurs before shipping costs are even presented to customers.
+#### **8.7 High Value Carts `CAR` Analysis by Payment Method**
+![high_value_carts_car_by_payment_method](./charts/44.high_value_carts_car_by_payment_method.png)
+#### **Key Insights**
+- Payment Method does not materially affect abandonment behavior among High Value Carts.
+- **Cash**, **Card**, and **Wallet** exhibit nearly identical abandonment rates (**~70%**).
+- The largest source of leakage comes from carts that never reached the checkout stage (**100%** abandonment).
+- High Value Cart abandonment appears to be driven primarily by pre-checkout behavior rather than checkout-related factors.
+- Checkout-related factors become relatively insignificant once users enter the checkout flow.
+#### **Business Interpretation**
+The primary business problem is not payment friction.
 
+Optimizing payment options is unlikely to significantly improve conversion for High Value Carts.
 
+Optimizing payment options is unlikely to significantly improve conversion for High Value Carts.
 
+Product and Growth teams should prioritize investigating pre-checkout user behavior instead of investing resources in checkout optimization initiatives.
 
-
+Future analysis should focus on behavioral signals preceding checkout initiation to identify the root cause of the leakage.
 
 
 
