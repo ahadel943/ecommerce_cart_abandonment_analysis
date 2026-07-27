@@ -816,7 +816,7 @@ Customer type is unlikely to be a significant driver of high-value cart abandonm
 #### **Business Interpretation**
 The largest leakage among high-value carts is unlikely to be explained by customer-related factors. Future investigations should focus on checkout-stage variables such as shipping costs, payment methods, and abandonment reasons to identify the primary drivers of abandonment.
 #### **8.6 High Value Carts `CAR` Analysis by Shipping Cost Group**
-![]()
+![high_value_carts_car_by_shipping_cost_group](./charts/43.high_value_carts_car_by_shipping_cost_group.png)
 #### **Key Insights**
 - Nearly **half** of the high-value abandoned carts (**108,171** carts) did not reach the checkout stage at all, making pre-checkout abandonment the largest source of leakage in this segment.
 - Among high-value carts that reached checkout, Cart Abandonment Rates remained consistently close across all shipping cost groups (**69.75%–70.82%**), suggesting that shipping cost is not a primary driver of abandonment for these users.
