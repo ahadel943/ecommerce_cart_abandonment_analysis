@@ -803,6 +803,16 @@ Device type is unlikely to be a primary contributor to the high abandonment rate
 - High-value carts (**1500+**) maintain consistently high abandonment rates across all acquisition channels (**~82%**), with only marginal differences between channels, indicating that customer acquisition source has little influence on abandonment behavior within this segment.
 #### **Business Interpretation**
 Acquisition channels do not appear to be a meaningful driver of high-value cart abandonment, suggesting that the largest leakage point is likely caused by factors occurring later in the customer journey rather than how customers were acquired.
+#### **8.4 High Value Carts `CAR` Analysis by Customer Type**
+![high_value_carts_car_by_customer_type](./charts/41.high_value_carts_car_by_customer_type.png)
+#### **Key Insights**
+High-value carts (**1500+**) exhibit nearly identical abandonment rates for both New (**82.13%**) and Returning customers (**81.94%**), indicating that customer type has minimal influence on abandonment behavior within this segment.
+#### **Business Interpretation**
+Customer type is unlikely to be a significant driver of high-value cart abandonment, suggesting that the underlying causes are more closely related to transactional or checkout-related factors rather than customer tenure.
+
+
+
+
 
 
 
