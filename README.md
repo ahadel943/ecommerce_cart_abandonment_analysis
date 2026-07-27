@@ -784,17 +784,19 @@ Cart value alone does not appear to influence why customers abandon their carts,
 - Abandonment reasons are distributed almost evenly across all cart size groups, indicating that the number of items in a cart has little to no influence on the specific reason for abandonment.
 #### **Business Interpretation**
 Customers appear to abandon their carts for similar reasons regardless of cart size, suggesting that reducing cart abandonment should focus on improving the overall checkout experience rather than targeting carts with a particular number of items.
-
-
-
-
-
-
-
-
-
-
-
+### **8. What factors are associated with high-value abandoned carts ?**
+#### **8.1 High Value Carts `CAR` Analysis by Country and City**
+![high_value_carts_car_by_country_and_city](./charts/38.high_value_carts_car_by_country_and_city.png)
+#### **Key Insights**
+High-value carts (**1500+**) exhibit consistently high abandonment rates across all **countries** and **cities**, with **CAR** remaining close to the overall segment average (**~82%**), indicating no meaningful geographic variation within this segment.
+#### **Business Interpretation**
+Geography does not appear to be a primary driver of abandonment among high-value carts, suggesting that the largest leakage in this segment is likely driven by other factors such as customer behavior, checkout experience, payment preferences, or shipping-related considerations.
+#### **8.2 High Value Carts `CAR` Analysis by Device**
+![high_value_carts_car_by_device](./charts/39.high_value_carts_car_by_device.png)
+#### **Key Insights**
+- High-value carts (**1500+**) show remarkably similar abandonment rates across all device types, ranging from **81.83%** to **82.28%**, indicating that device preference has minimal influence on abandonment behavior within this segment.
+#### **Business Interpretation**
+Device type is unlikely to be a primary contributor to the high abandonment rate observed among high-value carts, suggesting that the underlying causes are more likely related to business or checkout-related factors rather than the shopping platform itself.
 
 
 
