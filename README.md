@@ -689,7 +689,8 @@ Since confidence values exhibit limited variability and contain no extreme obser
 - **7. Are specific abandonment reasons associated with particular cart characteristics ?**
 - **8. What factors are associated with high-value abandoned carts ?**
 - **9. What is the average events count per cart value group ?**
-- **10. Which business dimensions provide the greatest opportunities for reducing cart abandonment ?**
+- **10. Is a specific abandonment reason associated with high value carts ?**
+- **11. Which business dimensions provide the greatest opportunities for reducing cart abandonment ?**
 
 ## **Analysis**
 ### **1. What is the overall CAR ?**
@@ -861,6 +862,30 @@ High-value cart abandonment does not appear to be driven by insufficient cart en
 Increasing user engagement within the cart is unlikely to materially improve conversion rates for high-value carts, as engagement levels are already comparable across all value segments.
 
 The root cause of the high-value cart leakage is likely occurring elsewhere in the customer journey, particularly before checkout initiation or within factors not represented in the available dataset.
+**10. Is a specific abandonment reason associated with high value carts ?**
+![high_value_cart_abandonment_by_reason](./charts/45.high_value_cart_abandonment_by_reason.png)
+#### **Key Insights**
+- High Value Carts (**1500+**) do not exhibit a dominant abandonment reason.
+- The distribution of abandonment reasons is remarkably balanced across all five categories, with each reason contributing nearly **20%** of abandoned high-value carts.
+- **Payment Issues** recorded the highest count (**21,769 abandoned carts**), while **Just Browsing** recorded the lowest (**21,460 abandoned carts**). However, the difference between them is minimal and not large enough to indicate a meaningful pattern.
+- No single abandonment reason appears to disproportionately contribute to high-value cart abandonment.
+- The findings are consistent with previous analyses showing that customer demographics, acquisition channels, shipping cost groups, payment methods, and cart engagement metrics are not independently driving the high-value cart leak.
+#### **Business Interpretation**
+High-value cart abandonment appears to be a distributed problem rather than being driven by a specific pain point in the customer journey.
+
+There is no evidence that fixing a single issue (e.g., shipping cost, payment issues, or coupon failures) would substantially reduce high-value cart abandonment rates.
+
+The balanced distribution of abandonment reasons suggests that customers abandon high-value carts for a variety of reasons, with no factor emerging as the primary driver.
+
+The largest leak identified in the project (high-value abandoned carts) is therefore more likely to be the result of multiple small contributing factors rather than one dominant cause.
+
+Further improvements in high-value cart conversion would likely require a combination of initiatives across pricing, checkout experience, promotions, and customer engagement rather than focusing resources on a single abandonment reason.
+
+
+
+
+
+
 
 
 
