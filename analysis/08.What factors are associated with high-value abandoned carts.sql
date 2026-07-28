@@ -496,26 +496,3 @@ select
 from summary
 where "High Value Group" = '1500+';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
