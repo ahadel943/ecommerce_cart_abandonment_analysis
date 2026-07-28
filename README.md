@@ -690,7 +690,7 @@ Since confidence values exhibit limited variability and contain no extreme obser
 - **8. What factors are associated with high-value abandoned carts ?**
 - **9. What is the average events count per cart value group ?**
 - **10. Is a specific abandonment reason associated with high value carts ?**
-- **11. Which business dimensions provide the greatest opportunities for reducing cart abandonment ?**
+- **11. At which stage are High Value Carts leaking ?**
 
 ## **Analysis**
 ### **1. What is the overall CAR ?**
@@ -880,8 +880,27 @@ The balanced distribution of abandonment reasons suggests that customers abandon
 The largest leak identified in the project (high-value abandoned carts) is therefore more likely to be the result of multiple small contributing factors rather than one dominant cause.
 
 Further improvements in high-value cart conversion would likely require a combination of initiatives across pricing, checkout experience, promotions, and customer engagement rather than focusing resources on a single abandonment reason.
+**11. At which stage are High Value Carts leaking ?**
+| Stage                      | Cart Count | Percentage |
+| --------------------------- | ---------- | ---------- |
+| Total High Value Carts      | 270,566    | **100%**   |
+| Did not make it to Checkout | 108,139    | **39.97%** |
+| Reached Checkout | 162,427    | **60.03%** |
+| Reached Checkout but did not Order | 113,875 | **70.11%** |
+| Completed Orders            | 48,552 | **29.89%**      |
+#### **Key Insights**
+- **High Value Carts experience their largest leak after reaching the Checkout stage rather than before it**.
+- Approximately **60%** of High Value Carts successfully **reach Checkout**, but nearly **70%** of them still fail to convert into completed Orders.
+- Only **17.94%** of High Value Carts are ultimately converted into Orders.
+- Previous analyses showed no meaningful differences across Customer Demographics, Acquisition Channels, Devices, Shipping Cost Groups, Payment Methods, or Abandonment Reasons, suggesting that the leak is not driven by a specific customer segment or cart characteristic.
+#### **Business Interpretation**
+The primary conversion problem for High Value Carts occurs during the Checkout-to-Order stage.
 
+Since the leak is consistent across customer segments and cart characteristics, the issue appears to be systemic rather than segment-specific.
 
+High Value customers demonstrate strong purchase intent by reaching Checkout, yet a substantial proportion still abandon before completing payment, indicating potential friction during the final purchase stage.
+
+Further investigation should focus on Checkout-related factors such as payment experience, checkout flow complexity, session interruptions, or external behavioral factors that are not captured within the current dataset.
 
 
 
