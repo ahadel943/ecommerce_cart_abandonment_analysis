@@ -870,7 +870,7 @@ High-value cart abandonment does not appear to be driven by insufficient cart en
 Increasing user engagement within the cart is unlikely to materially improve conversion rates for high-value carts, as engagement levels are already comparable across all value segments.
 
 The root cause of the high-value cart leakage is likely occurring elsewhere in the customer journey, particularly before checkout initiation or within factors not represented in the available dataset.
-**10. Is a specific abandonment reason associated with high value carts ?**
+### **10. Is a specific abandonment reason associated with high value carts ?**
 ![high_value_cart_abandonment_by_reason](./charts/45.high_value_cart_abandonment_by_reason.png)
 #### **Key Insights**
 - High Value Carts (**1500+**) do not exhibit a dominant abandonment reason.
@@ -888,7 +888,7 @@ The balanced distribution of abandonment reasons suggests that customers abandon
 The largest leak identified in the project (high-value abandoned carts) is therefore more likely to be the result of multiple small contributing factors rather than one dominant cause.
 
 Further improvements in high-value cart conversion would likely require a combination of initiatives across pricing, checkout experience, promotions, and customer engagement rather than focusing resources on a single abandonment reason.
-**11. At which stage are High Value Carts leaking ?**
+### **11. At which stage are High Value Carts leaking ?**
 | Stage                      | Cart Count | Percentage |
 | --------------------------- | ---------- | ---------- |
 | Total High Value Carts      | 270,566    | **100%**   |
@@ -928,3 +928,15 @@ From a business perspective, efforts to improve conversion rates should prioriti
 - Implement **additional tracking for Checkout-related interactions**, including payment failures, session interruptions, repeated Checkout attempts, and time spent during the Checkout process to improve visibility into customer behavior at the final purchase stage.
 - Establish **dedicated KPIs for High Value Carts**, such as Checkout Completion Rate, Order Completion Rate, and High Value Cart Conversion Rate, to continuously monitor performance improvements over time.
 - Since abandonment behavior appears consistent across customer demographics and acquisition channels, **optimization efforts should focus on improving the overall Checkout experience** rather than targeting specific customer segments.
+
+## **Tools Used**
+- **PostgreSQL**
+    - Used as the primary database management system (DBMS) for querying, aggregating, and analyzing transactional data.
+- **DBeaver**
+    - Used as the SQL client for writing and executing queries, and exploring database tables in an interactive environment.
+- **Microsoft Excel**
+    - Used for quick data validation, exploratory charts, and supporting visual analysis during EDA.
+- **Microsoft PowerPoint**
+    - Used for creating final visualizations and presenting key insights in a structured business-friendly format.
+- **Visual Studio Code (VS Code)**
+    - Used for organizing SQL scripts, building the project structure, and maintaining documentation (README and analysis files).
