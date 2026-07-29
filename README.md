@@ -18,7 +18,15 @@ To improve conversion performance, the business needs to understand customer beh
 The goal of this project is to measure cart abandonment performance, identify the key drivers behind customer drop-off, quantify the business impact, and provide data-driven recommendations that help increase completed purchases and recover lost revenue.
 
 ## **Executive Summary**
-**NO SUMMARY YET**
+This project analyzed Cart Abandonment behavior across the e-commerce purchase funnel to identify the factors associated with abandoned carts and uncover potential conversion leaks affecting business performance.
+
+The analysis revealed that Cart Abandonment Rates remain consistently high across all Cart Value Groups, exceeding **80%** in most cases. While **High Value Carts (1500+)** exhibited abandonment rates similar to other cart segments, they represented **the largest volume of abandoned carts** and therefore posed the greatest potential revenue impact.
+
+A comprehensive investigation across multiple dimensions including `Country`, `City`, `Device`, `Acquisition Channel`, `Customer Type`, `Premium Status`, `Shipping Cost Groups`, `Payment Methods`, `Cart Events`, and `Abandonment Reasons` showed no meaningful segment-specific differences in abandonment behavior for High Value Carts. The conversion leak was broadly distributed rather than concentrated within a particular customer segment.
+
+The most significant finding emerged from the **Checkout Funnel Analysis**. Approximately **60%** of High Value Carts successfully reached the **Checkout** stage, yet **more than 70%** of those carts failed to convert into **completed orders**. Ultimately, **only 17.94%** of High Value Carts resulted in completed purchases.
+
+These findings suggest that the primary conversion issue is not driven by **customer characteristics** or **cart composition**, but instead occurs during the transition from **Checkout to Order completion**. Consequently, future optimization efforts should prioritize improving the Checkout experience and further investigating customer behavior during the final purchase stage.
 
 ## **Dataset Description**
 | Table       | Description                             |
