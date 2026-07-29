@@ -902,10 +902,14 @@ High Value customers demonstrate strong purchase intent by reaching Checkout, ye
 
 Further investigation should focus on Checkout-related factors such as payment experience, checkout flow complexity, session interruptions, or external behavioral factors that are not captured within the current dataset.
 
+## **Conclusion**
+This analysis identified Cart Abandonment as a significant challenge across the e-commerce funnel, with an overall Cart Abandonment Rate exceeding **80%** across all Cart Value Groups. While abandonment rates remained relatively consistent across cart values, High Value Carts (1500+) represented **the largest volume of abandoned carts**, making them the most critical area for investigation.
 
+A detailed analysis of High Value Carts revealed that customer demographics and behavioral dimensions—including `Country`, `City`, `Device`, `Acquisition Channel`, `Customer Type`, `Premium Status`, `Shipping Cost Groups`, `Payment Methods`, `Cart Events`, and `Abandonment Reasons` did not exhibit meaningful differences in abandonment behavior. The leak was consistently distributed across customer segments rather than being concentrated within a particular group.
 
+The most important finding emerged from the Checkout funnel analysis. Approximately **60%** of High Value Carts successfully reached the Checkout stage, yet nearly **70%** of those carts still failed to convert into completed orders. Only **17.94%** of all High Value Carts ultimately became completed purchases.
 
+These findings suggest that the primary conversion problem is not driven by **customer characteristics** or **cart composition**, but rather occurs during the transition from **Checkout to Order completion**. High Value customers demonstrate strong purchase intent by progressing through the funnel, but substantial friction remains during the final purchase stage.
 
-
-
+From a business perspective, efforts to improve conversion rates should prioritize investigating the Checkout experience for High Value Carts, including payment completion behavior, checkout flow optimization, and other operational factors that may contribute to purchase abandonment.
 
